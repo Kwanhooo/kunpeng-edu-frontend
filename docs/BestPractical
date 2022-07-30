@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <h1>Hello World !</h1>
+    <h1>{{ items }}</h1>
+    <button @click="resetRouter">CLICK ME</button>
+  </div>
+</template>
+
+<script>
+import {mapGetters, mapMutations, mapActions} from 'vuex'
+import {resetRouter} from '@/router/router'
+
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Test",
+  computed: {
+    // items:,
+    ...mapGetters(['items'])
+  },
+  methods: {
+    resetRouter,
+    ...mapMutations({
+      pushItem: 'PUSH_ITEM_TO_ITEMS',
+    }),
+    ...mapActions([
+      'pushItemToItems',
+    ]),
+  },
+}
+</script>
+
+<style scoped>
+
+</style>
