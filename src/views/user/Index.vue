@@ -1,16 +1,12 @@
 <template>
-<div>
-  Index View
-</div>
+  <div>Index View</div>
 </template>
 
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Index"
+  name: 'Index'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

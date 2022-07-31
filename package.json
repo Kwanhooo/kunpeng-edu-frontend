@@ -4,15 +4,25 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:production": "vue-cli-service serve --mode production",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:preview": "vue-cli-service build --mode preview",
+    "lint": "vue-cli-service lint",
+    "lint:nofix": "vue-cli-service lint --no-fix",
+    "lint:js": "eslint src/**/*.js --fix",
+    "lint:css": "stylelint src/**/*.*ss --fix  --custom-syntax postcss-less",
+    "prettier-chekck": "npx prettier --check .",
+    "prettier-format": "npx prettier --write .",
+    "stylelint": "npx stylelint \"**/*.css\""
   },
   "dependencies": {
+    "ant-design-vue": "^3.2.10",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "element-plus": "^2.2.11",
     "lodash.clonedeep": "^4.5.0",
     "mitt": "^3.0.0",
+    "store": "^2.0.12",
     "vue": "^3.2.13",
     "vuex": "^4.0.2"
   },
@@ -24,6 +34,9 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "prettier": "2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
     "vue-router": "4"
   },
   "eslintConfig": {
@@ -39,11 +52,5 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  }
 }
