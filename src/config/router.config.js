@@ -18,6 +18,10 @@ export const constantRouterMap = [
   {
     path: '/404',
     component: () => import('@/views/exception/404')
+  },
+  {
+    path: '/accountAuthentication',
+    component: () => import('@/views/common/accountAuthentication')
   }
 ]
 
