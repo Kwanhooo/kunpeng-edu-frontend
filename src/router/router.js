@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { constantRouterMap } from '@/config/router.config'
 
-const setupRouter = function() {
+const setupRouter = function () {
   return createRouter({
     history: createWebHashHistory(),
-    routes: constantRouterMap
+    routes: constantRouterMap,
   })
 }
 

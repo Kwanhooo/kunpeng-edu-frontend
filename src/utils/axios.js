@@ -1,5 +1,3 @@
-// import app from '../main'
-
 const VueAxios = {
   vm: {},
   // eslint-disable-next-line no-unused-vars
@@ -17,22 +15,9 @@ const VueAxios = {
 
     Vue.axios = instance
 
-    Vue.config.globalProperties.axios=instance
-    Vue.config.globalProperties.$http=instance
-
-    // Object.defineProperties(Vue.prototype, {
-    //   axios: {
-    //     get: function get() {
-    //       return instance
-    //     }
-    //   },
-    //   $http: {
-    //     get: function get() {
-    //       return instance
-    //     }
-    //   }
-    // })
-  }
+    Vue.config.globalProperties.axios = instance
+    Vue.config.globalProperties.$http = instance
+  },
 }
 
 export { VueAxios }

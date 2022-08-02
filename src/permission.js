@@ -6,7 +6,7 @@ import cloneDeep from 'lodash.clonedeep'
  *
  * @param permission
  * @param route
- * @returns {boolean}
+ * @return {boolean}
  */
 function hasPermission(permission, route) {
   if (route.meta && route.meta.permission) {
@@ -23,7 +23,7 @@ function hasPermission(permission, route) {
 }
 
 /**
- * 单账户多角色时，使用该方法可过滤角色不存在的菜单
+ * 使用该方法可过滤角色不存在的菜单
  *
  * @param roles
  * @param route
@@ -54,13 +54,13 @@ function filterAsyncRouter(routerMap, roles) {
 const permission = {
   state: {
     routers: constantRouterMap,
-    addRouters: []
+    addRouters: [],
   },
   mutations: {
     SET_ROUTERS: (state, routers) => {
       state.addRouters = routers
       state.routers = constantRouterMap.concat(routers)
-    }
+    },
   },
   actions: {
     GenerateRoutes({ commit }, data) {
@@ -71,8 +71,8 @@ const permission = {
         commit('SET_ROUTERS', accessedRouters)
         resolve()
       })
-    }
-  }
+    },
+  },
 }
 
 export default permission
