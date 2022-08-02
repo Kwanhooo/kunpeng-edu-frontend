@@ -1,3 +1,3 @@
-export const items = function(state) {
+export const items = function (state) {
   return state.items
 }
