@@ -3,26 +3,29 @@
  * @type { *[] }
  */
 export const constantRouterMap = [
+  // Authentication
   {
-    path: '/user',
-    redirect: '/user/login',
-    hidden: true,
+    path: '/auth',
+    component: () => import('@/views/user/Authentication'),
+    redirect: '/auth/login',
     children: [
       {
-        path: 'login',
+        path: '/auth/login',
         name: 'login',
-        component: () => import('@/views/user/Login')
-      }
-    ]
+        component: () => import('@/components/user/Login'),
+      },
+      {
+        path: '/auth/register',
+        name: 'register',
+        component: () => import('@/components/user/Register'),
+      },
+    ],
   },
+  // Exceptions
   {
     path: '/404',
-    component: () => import('@/views/exception/404')
+    component: () => import('@/views/exception/404'),
   },
-  {
-    path: '/accountAuthentication',
-    component: () => import('@/views/common/accountAuthentication')
-  }
 ]
 
 /**
@@ -41,10 +44,10 @@ export const asyncRouterMap = [
         path: '/dashboard',
         name: 'dashboard',
         redirect: '/dashboard/workplace',
-        component: () => import('@/views/user/Login'),
+        component: () => import('@/views/user/Workplace'),
         meta: { title: 'menu.dashboard', keepAlive: true, icon: 'xxx', permission: ['dashboard'] },
-        children: []
-      }
-    ]
-  }
+        children: [],
+      },
+    ],
+  },
 ]

@@ -1,6 +1,3 @@
-// import app from "@/App";
-
-// import Vuex from 'vuex'
 import { createStore } from 'vuex'
 import state from './state'
 import mutations from './mutations'
@@ -11,10 +8,7 @@ const store = createStore({
   state,
   getters,
   mutations,
-  actions
+  actions,
 })
-
-// app.use(store);
-// app.use(Vuex);
 
 export default store
