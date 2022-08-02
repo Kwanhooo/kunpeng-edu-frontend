@@ -30,7 +30,7 @@ export default {
   padding-top: 16em;
   padding-left: 7em;
   background-image: url(../../assets/login_background.png);
-  width: 101em;
-  height: 37em;
+  width: 100vw;
+  height: 100vh;
 }
 </style>

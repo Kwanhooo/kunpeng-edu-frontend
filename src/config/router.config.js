@@ -3,35 +3,40 @@
  * @type { *[] }
  */
 export const constantRouterMap = [
-  {
-    path: '/user',
-    redirect: '/user/login',
-    hidden: true,
-    children: [
-      {
-        path: 'login',
-        name: 'login',
-        component: () => import('@/views/user/Login'),
-      },
-    ],
-  },
+  // 异常
   {
     path: '/404',
+    name: '404',
+    meta: { title: '404 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
     component: () => import('@/views/exception/404'),
   },
+  // 身份认证
   {
     path: '/common',
-    hidden: true,
+    name: 'common',
+    meta: { title: '鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+    redirect: '/common/login',
     children: [
       {
-        path: '/common/accountAuthentication',
+        path: '/common/login',
+        name: 'login',
+        meta: { title: '登入 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/accountAuthentication'),
       },
       {
         path: '/common/register',
+        name: 'register',
+        meta: { title: '注册 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/registerSub.vue'),
       },
     ],
+  },
+  // 首页
+  {
+    path: '/index',
+    name: 'index',
+    meta: { title: '首页 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: ['index'] },
+    component: () => import('@/views/user/Index'),
   },
 ]
 
@@ -39,22 +44,4 @@ export const constantRouterMap = [
  * 异步路由
  * @type { *[] }
  */
-export const asyncRouterMap = [
-  {
-    path: '/',
-    name: 'index',
-    component: () => import('@/views/user/Index'),
-    meta: { title: 'menu.home' },
-    redirect: '/dashboard/workplace',
-    children: [
-      {
-        path: '/dashboard',
-        name: 'dashboard',
-        redirect: '/dashboard/workplace',
-        component: () => import('@/views/user/Login'),
-        meta: { title: 'menu.dashboard', keepAlive: true, icon: 'xxx', permission: ['dashboard'] },
-        children: [],
-      },
-    ],
-  },
-]
+export const asyncRouterMap = [{}]
