@@ -4,7 +4,7 @@
       <div class="logoContainer">
         <img src="../../assets/kunpeng_logo.png" class="logo">
       </div>
-      <div class="loginTitle">用户登录</div>
+      <div class="loginTitle" >用户登录</div>
     </div>
     <div class="emailInputContainer">
       <input type="text" class="emailInput" placeholder="📫Email">
@@ -13,14 +13,14 @@
       <input type="password" class="passwordInput" placeholder="🔒Password" >
     </div>
     <div class="registerButtonContainer">
-      <a class="registerButton">立即注册→</a>
+      <a class="registerButton" @click="register()">立即注册→</a>
       <a class="problemButton">登录时遇到问题？</a>
     </div>
     <div class="loginButtonContainer">
       <button class="loginButton" >登录</button>
     </div>
     <div class="otherLoginTextContainer">
-      -------------其他登陆方式-------------
+      -------------其他登录方式-------------
     </div>
     <div class="otherLogin">
         <div class="wechatContainer">
@@ -38,7 +38,18 @@
 
 <script>
 export default {
-  name: "loginSub"
+  name: "loginSub",
+  data(){
+    return{
+
+    }
+  },
+  methods: {
+    register(){
+      console.log("Register1");
+      this.$router.push('/common/register');
+    },
+  }
 }
 </script>
 

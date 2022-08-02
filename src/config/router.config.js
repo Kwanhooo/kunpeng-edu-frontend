@@ -20,9 +20,21 @@ export const constantRouterMap = [
     component: () => import('@/views/exception/404')
   },
   {
-    path: '/accountAuthentication',
-    component: () => import('@/views/common/accountAuthentication')
-  }
+    path: '/common',
+    hidden: true,
+    children: [
+      {
+        path: '/common/accountAuthentication',
+        component: () => import('@/views/common/accountAuthentication'),
+
+      },
+      {
+        path: '/common/register',
+        component: () => import('@/views/common/registerSub.vue')
+      }
+    ]
+  },
+
 ]
 
 /**
