@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="sloganContainer">
-      <img src="../../assets/bottomSlogan.png" class="slogan" >
+      <img src="../../assets/bottomSlogan.png" class="slogan" />
     </div>
     <div class="authorContainer">
       <a class="author" href="https://gitee.com/hixs">@Hixs</a>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "bottomSub"
+  name: 'bottomSub',
 }
 </script>
 
@@ -22,19 +22,19 @@ export default {
 .container {
   width: 100%;
   height: 6em;
-  background-color:rgb(64,65,69);
+  background-color: rgb(64, 65, 69);
 }
-.sloganContainer{
- text-align: center;
-}
-.slogan{
-  width:20em;
-}
-.authorContainer{
+.sloganContainer {
   text-align: center;
 }
-.author{
-  margin-left:2em;
-  color:rgb(0,0,0);
+.slogan {
+  width: 20em;
+}
+.authorContainer {
+  text-align: center;
+}
+.author {
+  margin-left: 2em;
+  color: rgb(0, 0, 0);
 }
 </style>

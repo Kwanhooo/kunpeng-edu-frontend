@@ -1,7 +1,7 @@
 <template>
   <div>
     Login View
-    <el-button @click='handleClick()'>Test EL</el-button>
+    <el-button @click="handleClick()">Test EL</el-button>
   </div>
 </template>
 
@@ -11,11 +11,11 @@ export default {
   name: 'Login',
   methods: {
     handleClick() {
-      console.log(process.env.VUE_APP_REQUEST_TIMEOUT);
-      this.$message.success('Success');
-      this.axios.get('/api/test').then(response => {
-        console.log(response);
-      });
+      console.log(process.env.VUE_APP_REQUEST_TIMEOUT)
+      this.$message.success('Success')
+      this.axios.get('/api/test').then((response) => {
+        console.log(response)
+      })
     },
   },
 }

@@ -1,5 +1,4 @@
 <template>
-
   <router-view></router-view>
 </template>
 
@@ -10,12 +9,12 @@
 // import bottomSub from '@/views/common/bottomSub.vue'
 export default {
   name: 'App',
- // components: {topSub,leftSubTeacher,leftSubStudent,bottomSub},
-  data(){
-    return{
-      identity:sessionStorage.getItem('identity'),
+  // components: {topSub,leftSubTeacher,leftSubStudent,bottomSub},
+  data() {
+    return {
+      identity: sessionStorage.getItem('identity'),
     }
-  }
+  },
 }
 </script>
 

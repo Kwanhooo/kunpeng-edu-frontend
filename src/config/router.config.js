@@ -11,13 +11,13 @@ export const constantRouterMap = [
       {
         path: 'login',
         name: 'login',
-        component: () => import('@/views/user/Login')
-      }
-    ]
+        component: () => import('@/views/user/Login'),
+      },
+    ],
   },
   {
     path: '/404',
-    component: () => import('@/views/exception/404')
+    component: () => import('@/views/exception/404'),
   },
   {
     path: '/common',
@@ -26,15 +26,13 @@ export const constantRouterMap = [
       {
         path: '/common/accountAuthentication',
         component: () => import('@/views/common/accountAuthentication'),
-
       },
       {
         path: '/common/register',
-        component: () => import('@/views/common/registerSub.vue')
-      }
-    ]
+        component: () => import('@/views/common/registerSub.vue'),
+      },
+    ],
   },
-
 ]
 
 /**
@@ -55,8 +53,8 @@ export const asyncRouterMap = [
         redirect: '/dashboard/workplace',
         component: () => import('@/views/user/Login'),
         meta: { title: 'menu.dashboard', keepAlive: true, icon: 'xxx', permission: ['dashboard'] },
-        children: []
-      }
-    ]
-  }
+        children: [],
+      },
+    ],
+  },
 ]
