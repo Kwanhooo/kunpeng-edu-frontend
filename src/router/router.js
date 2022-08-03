@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { constantRouterMap } from '@/config/router.config'
 
 const setupRouter = function () {
   return createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: constantRouterMap,
   })
 }
