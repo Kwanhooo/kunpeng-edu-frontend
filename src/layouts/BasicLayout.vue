@@ -8,7 +8,7 @@
   <div class="basic-layout-content">
     <PageView></PageView>
   </div>
-  <div class="basic-layout-footer">
+  <div class="basic-layout-footer-outer">
     <BasicFooter></BasicFooter>
   </div>
 </template>

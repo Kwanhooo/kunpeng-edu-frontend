@@ -4,6 +4,17 @@
 @slowTransition: .4s ease;
 @fontSizeBase: 14px;
 @lineHeightBase:32px;
+@contentHeight:100vh;
+@footerHeight:55vh;
+@footerColTitleFontSize:15px;
+@footerColItemFontSize:14px;
+
+a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: all;
+  cursor: pointer;
+}
 
 html {
   overflow-y: auto;
@@ -145,7 +156,7 @@ html {
 }
 
 .basic-layout-content {
-  height: 1000rem;
+  height: @contentHeight;
 }
 
 .account-option-svg {
@@ -174,7 +185,7 @@ html {
   margin: 0 .6rem;
   font-family: @navFontFamily;
   font-size: @fontSizeBase;
-  pointer-events: auto;
+  pointer-events: all;
   cursor: pointer;
   border-radius: 12px;
   transition: @fastTransition;
@@ -183,4 +194,97 @@ html {
 .link-nav:hover {
   color: white;
   background: rgb(0 0 0 / 90%);
+}
+
+.basic-layout-footer-outer {
+  //margin: 0 auto;
+  width: 100vw;
+  height: auto;
+  padding: 3rem 1rem;
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+}
+
+.basic-layout-footer {
+  position: relative;
+  display: flex;
+  height: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.basic-footer-col {
+  width: 15rem;
+  height: 100%;
+}
+
+.l-icon {
+  width: @lineHeightBase;
+  height: @lineHeightBase;
+}
+
+.footer-icon-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.footer-app-name {
+  font-family: "Comic Sans MS", monospace;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.basic-footer-col-title {
+  margin-bottom: 1.5rem;
+  font-size: @footerColTitleFontSize;
+}
+
+.basic-footer-col-item {
+  margin: 1.2rem 0;
+  font-size: @footerColItemFontSize;
+  color: #646464;
+}
+
+.multi-func-bar {
+  position: relative;
+  display: flex;
+  height: 100%;
+  max-width: 75rem;
+  padding: 2rem 0 0;
+  margin: 0 auto;
+  font-size: @fontSizeBase;
+  color: #666;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.basic-footer-repo {
+  width: @lineHeightBase;
+  height: @lineHeightBase;
+}
+
+.basic-footer-divide {
+  width: @lineHeightBase - 4px;
+  height: @lineHeightBase - 4px;
+}
+
+.basic-footer-repo-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.certificate-sn {
+  display: inline-flex;
+  align-items: center;
+  font-size: @fontSizeBase;
+  color: #666;
+}
+
+.basic-footer-beian-svg {
+  display: inline-flex;
+  width: @lineHeightBase - 4px;
+  height: @lineHeightBase - 4px;
+  padding-right: 3px;
 }
