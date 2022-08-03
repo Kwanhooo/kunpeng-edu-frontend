@@ -3,12 +3,27 @@
  * @type { *[] }
  */
 export const constantRouterMap = [
-  // 异常
+  // 首页
   {
-    path: '/404',
-    name: '404',
-    meta: { title: '404 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
-    component: () => import('@/views/exception/404'),
+    path: '/',
+    name: 'index',
+    component: () => import('@/layouts/BasicLayout'),
+    meta: { title: '首页 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: ['index'] },
+    children: [
+      // 班级管理
+      {
+        path: '/class',
+        name: 'class',
+        redirect: '/class/dashboard',
+        children: [
+          {
+            path: '/class/dashboard',
+            name: '',
+            component: () => import('@/views/class/ClassDashboard'),
+          },
+        ],
+      },
+    ],
   },
   // 身份认证
   {
@@ -31,12 +46,12 @@ export const constantRouterMap = [
       },
     ],
   },
-  // 首页
+  // 异常
   {
-    path: '/index',
-    name: 'index',
-    meta: { title: '首页 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: ['index'] },
-    component: () => import('@/views/user/Index'),
+    path: '/404',
+    name: '404',
+    meta: { title: '404 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+    component: () => import('@/views/exception/404'),
   },
 ]
 

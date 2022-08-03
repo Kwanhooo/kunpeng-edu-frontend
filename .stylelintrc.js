@@ -16,6 +16,7 @@ module.exports = {
     'no-empty-source': null, // 禁止空的源码
     'selector-max-id': 3, // 限制一个选择器中 ID 选择器的数量
     'max-nesting-depth': 4,
+    'no-duplicate-selectors': null, // 禁止重复的选择器
     indentation: [
       2,
       {
