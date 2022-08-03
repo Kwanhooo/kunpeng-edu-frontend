@@ -48,15 +48,21 @@
   <div class="multi-func-bar">
     <span>Copyright © 2022 KunPeng Edu Org. All rights reserved.</span>
     <div class="basic-footer-repo-wrapper">
-      <img class="basic-footer-repo" src="../assets/svgs/github.svg" />
+      <a href="https://github.com/Kwanhooo/kunpeng-edu-frontend" target="_blank">
+        <img class="basic-footer-repo" src="../assets/svgs/github.svg" />
+      </a>
       <img class="basic-footer-divide" src="../assets/svgs/divide.svg" />
-      <img class="basic-footer-repo" src="../assets/svgs/gitee-fill-round.svg" />
+      <a href="https://gitee.com/hixs/kunpeng_front" target="_blank">
+        <img class="basic-footer-repo" src="../assets/svgs/gitee-fill-round.svg" />
+      </a>
     </div>
-    <div>
-      <img
-        alt="Website"
-        src="https://img.shields.io/website?down_color=red&down_message=%E4%B8%A2%E5%A4%B1&label=%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81&style=for-the-badge&up_color=green&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fkp.0xcafebabe.cn"
-      />
+    <div class="basic-footer-service-status">
+      <a href="https://kp.0xcafebabe.cn/" target="_blank">
+        <img
+          alt="Website"
+          src="https://img.shields.io/website?down_color=red&down_message=%E4%B8%A2%E5%A4%B1&label=%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81&style=for-the-badge&up_color=green&up_message=%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fkp.0xcafebabe.cn"
+        />
+      </a>
     </div>
     <div class="certificate-sn">
       <img class="basic-footer-beian-svg" src="../assets/svgs/beian.svg" />

@@ -199,6 +199,7 @@ html {
 }
 .multi-func-bar {
   position: relative;
+  align-items: center;
   display: flex;
   height: 100%;
   max-width: 75rem;
@@ -232,5 +233,9 @@ html {
   width: 28px;
   height: 28px;
   padding-right: 3px;
+}
+.basic-footer-service-status {
+  display: inline-flex;
+  align-items: center;
 }
 /*# sourceMappingURL=BasicLayout.css.map */
