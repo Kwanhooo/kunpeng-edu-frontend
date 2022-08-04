@@ -103,7 +103,7 @@ export default {
     // 获得.basic-layout-footer-outer的高度
     const footerHeight = document.querySelector('.basic-layout-footer-outer').offsetHeight
     const targetHeight = bodyHeight - viewportHeight - footerHeight + 100
-    console.log(targetHeight)
+    // console.log(targetHeight)
     window.addEventListener('scroll', function () {
       if (window.scrollY > targetHeight) {
         setTimeout(() => {

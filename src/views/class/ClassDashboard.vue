@@ -1,5 +1,5 @@
 <template>
-  <div style="background: palegoldenrod; width: 20rem; height: 100%"></div>
+  <div style="background: palegoldenrod; width: 100%; height: 150vh">Class Dashboard</div>
 </template>
 
 <script>

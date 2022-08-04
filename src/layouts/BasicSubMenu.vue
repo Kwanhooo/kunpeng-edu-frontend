@@ -7,18 +7,37 @@
       id="dynamic-icon"
       style="margin-top: 0.5rem; margin-right: 0.5rem"
     />
-    <a class="--tab --is-active">首页</a>
-    <a class="--tab">班级管理</a>
-    <a class="--tab">学生管理</a>
-    <a class="--tab">考试管理</a>
-    <a class="--tab">试题库</a>
-    <a class="--tab">工作流</a>
+    <a
+      :class="{ '--tab': true, '--is-active': activeIndex === index }"
+      v-for="(module, index) in __teacherModules"
+      :key="index"
+      @click="onActiveModuleChange(module, index)"
+    >
+      {{ module }}
+    </a>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'BasicSubMenu',
+  data() {
+    return {
+      activeIndex: 0,
+    }
+  },
+  methods: {
+    onActiveModuleChange(module, index) {
+      this.activeIndex = index
+      // this.$store.commit('setActiveModule', module)
+      // this.$router.push(module.path)
+    },
+  },
+  computed: {
+    ...mapGetters(['__teacherModules']),
+  },
 }
 </script>
 

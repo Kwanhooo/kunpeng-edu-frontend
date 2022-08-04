@@ -102,6 +102,7 @@ html {
 .basic-layout-sub-menu-outer {
   position: sticky;
   top: 0;
+  z-index: 9999;
   display: flex;
   height: 51px;
   background: #fff;
@@ -124,7 +125,7 @@ html {
   overflow: hidden;
   font-family: system-ui, sans-serif;
   line-height: 1;
-  color: inherit;
+  color: #666;
   text-decoration: none;
   white-space: nowrap;
   border-radius: 10px 10px 0 0;
@@ -145,6 +146,7 @@ html {
   transition: transform ease var(--animation-time, 200ms), opacity ease 0ms var(--animation-time, 200ms);
 }
 .--tab:hover {
+  color: #000;
   background: #eaeaea;
 }
 .--tabs:not(:hover) .--tab:not(.--is-active):first-child::after,
@@ -164,12 +166,13 @@ html {
   transform: translateX(0%);
 }
 .basic-layout-content {
-  height: 100vh;
+  min-height: 100vh;
 }
 .account-option-svg {
   padding: 5px;
   margin-left: 0.6rem;
   transition: 0.4s ease;
+  border-radius: 5px;
 }
 .account-option-svg:hover {
   background: #eaeaea;
@@ -191,12 +194,13 @@ html {
   font-size: 14px;
   pointer-events: all;
   cursor: pointer;
-  border-radius: 12px;
-  transition: 0.2s ease;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
 }
 .link-nav:hover {
   color: white;
   background: rgba(0, 0, 0, 0.9);
+  border-radius: 24px;
 }
 .basic-layout-footer-outer {
   width: 100vw;
@@ -340,5 +344,63 @@ div .--slogan p:nth-child(3) {
 .copyright-text {
   display: inline-flex;
   align-content: center;
+}
+.basic-layout-content-title {
+  padding: 48px 0;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  border-bottom: 1px solid #eaeaea;
+}
+.basic-layout-content-title-inner {
+  position: relative;
+  display: flex;
+  max-width: 75rem;
+  margin: 0 auto;
+  flex-direction: row;
+}
+.basic-layout-content-main {
+  position: relative;
+  display: flex;
+  height: auto;
+  max-width: 75rem;
+  margin: 48px auto;
+  flex-direction: row;
+}
+.basic-layout-sidebar-wrapper {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 18rem;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.basic-layout-content-router-view {
+  width: 100%;
+}
+.basic-layout-sidebar-item {
+  padding: 12px;
+  margin: 0 20px 0 -12px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.basic-layout-sidebar-item:hover {
+  background: #eaeaea;
+}
+.basic-layout-sidebar-inner {
+  position: sticky;
+  top: 64px;
+  z-index: 101;
+  display: block;
+}
+.active-side-bar-item {
+  margin: 5px inherit;
+  font-size: 18px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=BasicLayout.css.map */

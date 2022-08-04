@@ -8,16 +8,18 @@ export const constantRouterMap = [
     path: '/',
     name: 'index',
     component: () => import('@/layouts/BasicLayout'),
-    meta: { title: '首页 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: ['index'] },
+    meta: { title: '首页', keepAlive: false, icon: '', permission: ['index'] },
     children: [
       // 班级管理
       {
         path: '/class',
         name: 'class',
+        meta: { title: '班级管理', keepAlive: false, icon: '', permission: ['index'] },
         redirect: '/class/dashboard',
         children: [
           {
             path: '/class/dashboard',
+            meta: { keepAlive: false, icon: '', permission: ['class.dashboard'] },
             name: '',
             component: () => import('@/views/class/ClassDashboard'),
           },
@@ -29,19 +31,19 @@ export const constantRouterMap = [
   {
     path: '/common',
     name: 'common',
-    meta: { title: '鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+    meta: { title: '', keepAlive: false, icon: '', permission: [] },
     redirect: '/common/login',
     children: [
       {
         path: '/common/login',
         name: 'login',
-        meta: { title: '登入 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+        meta: { title: '登入', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/accountAuthentication'),
       },
       {
         path: '/common/register',
         name: 'register',
-        meta: { title: '注册 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+        meta: { title: '注册', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/registerSub.vue'),
       },
     ],
@@ -50,8 +52,13 @@ export const constantRouterMap = [
   {
     path: '/404',
     name: '404',
-    meta: { title: '404 - 鲲鹏智能学考平台', keepAlive: false, icon: '', permission: [] },
+    meta: { title: '走丢啦', keepAlive: false, icon: '', permission: [] },
     component: () => import('@/views/exception/404'),
+  },
+  // 没有匹配到的路由，重定向到404
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/404',
   },
 ]
 
