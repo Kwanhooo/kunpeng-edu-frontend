@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { constantRouterMap } from '@/config/router.config'
+import { afterEach, beforeEach } from '@/config/guard.config.ts'
 
 const setupRouter = function () {
   return createRouter({
@@ -9,6 +10,10 @@ const setupRouter = function () {
 }
 
 const router = setupRouter()
+
+// Guards
+router.beforeEach(beforeEach)
+router.afterEach(afterEach)
 
 /**
  * 退出登录或者token过期时调用，重置路由

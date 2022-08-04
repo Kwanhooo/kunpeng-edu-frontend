@@ -65,11 +65,11 @@
     <div class="copyright-text">Copyright © 2022 KunPeng Edu Org. All rights reserved.</div>
     <div class="basic-footer-repo-wrapper">
       <a href="https://github.com/Kwanhooo/kunpeng-edu-frontend" target="_blank">
-        <img class="basic-footer-repo" src="../assets/svgs/github.svg" />
+        <img class="basic-footer-repo" src="../assets/svgs/github.svg" alt="github" />
       </a>
-      <img class="basic-footer-divide" src="../assets/svgs/divide.svg" />
+      <img class="basic-footer-divide" src="../assets/svgs/divide.svg" alt="divide" />
       <a href="https://gitee.com/hixs/kunpeng_front" target="_blank">
-        <img class="basic-footer-repo" src="../assets/svgs/gitee-fill-round.svg" />
+        <img class="basic-footer-repo" src="../assets/svgs/gitee-fill-round.svg" alt="gitee" />
       </a>
     </div>
     <div class="basic-footer-service-status">
@@ -81,7 +81,7 @@
       </a>
     </div>
     <div class="certificate-sn">
-      <img class="basic-footer-beian-svg" src="../assets/svgs/beian.svg" />
+      <img class="basic-footer-beian-svg" src="../assets/svgs/beian.svg" alt="beian" />
       <span>粤ICP备2022013690号-2</span>
     </div>
   </div>
@@ -94,7 +94,6 @@ export default {
     return {}
   },
   mounted() {
-    const vm = this
     const logoEl = document.getElementById('app-name')
     // 当--app-name进入可视区域时，设置logo的class为trace
     // 获得视口高度

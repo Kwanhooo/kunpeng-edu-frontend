@@ -14,6 +14,8 @@ import { VueAxios } from './utils/request'
 import './global.less' // 自定义全局样式
 import ElementPlus from 'element-plus' // 引入element-plus
 import 'element-plus/dist/index.css' // 引入element-plus样式
+import NProgress from 'nprogress' // 引入nprogress进度条
+import './assets/less/nprogress.less' // 引入nprogress进度条样式
 
 const app = createApp(App)
 
@@ -28,6 +30,9 @@ app.use(store)
 
 // 挂载 ElementPlus
 app.use(ElementPlus)
+
+// 挂载NProgress
+app.NProgress = NProgress
 
 // 挂载 根组件
 app.mount('#app')

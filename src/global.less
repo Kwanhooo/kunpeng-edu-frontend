@@ -1,3 +1,6 @@
+@globalSelectionBackground:#79ffe1;
+@globalSelectionColor:#000000;
+
 * {
   margin: 0;
 }
@@ -5,4 +8,30 @@
 html {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.selection(@bg; @color) {
+  &::selection {
+    -webkit-font-smoothing: antialiased;
+    color: @color;
+    text-shadow: none;
+    background: @bg;
+  }
+
+  &::selection {
+    -webkit-font-smoothing: antialiased;
+    color: @color;
+    text-shadow: none;
+    background: @bg;
+  }
+}
+
+.selection(@globalSelectionBackground; @globalSelectionColor);
+
+.element {
+  .selection(@globalSelectionBackground; @globalSelectionColor);
+}
+
+#nprogress .bar {
+  background: black;
 }

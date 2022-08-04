@@ -1,8 +1,35 @@
 * {
   margin: 0;
 }
-
 html {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+::selection {
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+  text-shadow: none;
+  background: #79ffe1;
+}
+::selection {
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+  text-shadow: none;
+  background: #79ffe1;
+}
+.element::selection {
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+  text-shadow: none;
+  background: #79ffe1;
+}
+.element::selection {
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
+  text-shadow: none;
+  background: #79ffe1;
+}
+#nprogress .bar {
+  background: black;
+}
+/*# sourceMappingURL=global.css.map */

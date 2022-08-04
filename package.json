@@ -25,6 +25,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "lodash.clonedeep": "^4.5.0",
     "mitt": "^3.0.0",
+    "nprogress": "^0.2.0",
     "store": "^2.0.12",
     "vue": "^3.2.13",
     "vue-ui": "^0.1.3",

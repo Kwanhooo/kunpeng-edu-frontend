@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { BasicHeader, BasicSubMenu, BasicFooter, PageView } from '@/layouts'
+import { BasicHeader, BasicSubMenu, BasicFooter, PageView } from '@/layouts/index'
 
 export default {
   name: 'BasicLayout',
