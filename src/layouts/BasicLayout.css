@@ -295,7 +295,7 @@ div .--slogan {
 }
 div .--slogan p {
   width: 110%;
-  padding: 2px 0;
+  padding: 3px 0;
   filter: brightness(0);
   animation: color-cycle 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   background-clip: text;
@@ -327,6 +327,7 @@ div .--slogan p:nth-child(3) {
   fill: transparent;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 1rem;
+  letter-spacing: 0.1rem;
   stroke-dasharray: 650 650;
   stroke-dashoffset: 650;
   stroke: #09816c;

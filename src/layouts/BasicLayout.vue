@@ -36,6 +36,7 @@ export default {
         // --tabs整体向右移动，icon可见
         icon.style.opacity = '1'
         subMenu.style.transform = 'translateX(16px)'
+        navOuter.style.boxShadow = '0 0 15px 0 rgb(0 0 0 / 10%)'
       } else {
         if (!isDown) return
         isDown = false
@@ -45,6 +46,7 @@ export default {
         // icon.style.display = 'none'
         icon.style.opacity = '0'
         subMenu.style.transform = 'translateX(-16px)'
+        navOuter.style.boxShadow = ''
       }
     })
   },

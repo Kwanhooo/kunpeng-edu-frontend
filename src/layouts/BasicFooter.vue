@@ -5,8 +5,7 @@
         <img class="l-icon" src="../assets/kunpeng_logo.png" alt="logo" />
 
         <svg id="app-name" width="auto" height="32px">
-          a
-          <text id="logo-text" x="16%" y="80%" text-anchor="middle" disabled="true">unPeng</text>
+          <text id="logo-text" x="2.3rem" y="80%" text-anchor="middle">unPeng</text>
         </svg>
       </div>
       <div>
@@ -91,7 +90,11 @@
 <script>
 export default {
   name: 'BasicFooter',
+  data() {
+    return {}
+  },
   mounted() {
+    const vm = this
     const logoEl = document.getElementById('app-name')
     // 当--app-name进入可视区域时，设置logo的class为trace
     // 获得视口高度
@@ -104,9 +107,15 @@ export default {
     console.log(targetHeight)
     window.addEventListener('scroll', function () {
       if (window.scrollY > targetHeight) {
-        logoEl.setAttribute('class', 'trace')
+        setTimeout(() => {
+          logoEl.classList.add('trace')
+        }, 300)
       } else {
-        logoEl.setAttribute('class', '')
+        logoEl.classList.remove('trace')
+        // 以下方法似乎可以重绘logoEl，使得动画可以多次播放
+        logoEl.remove()
+        const footerIconWrapper = document.querySelector('.footer-icon-wrapper')
+        footerIconWrapper.appendChild(logoEl)
       }
     })
   },
