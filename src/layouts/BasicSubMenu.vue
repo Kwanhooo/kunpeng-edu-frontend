@@ -12,6 +12,7 @@
     <a class="--tab">学生管理</a>
     <a class="--tab">考试管理</a>
     <a class="--tab">试题库</a>
+    <a class="--tab">工作流</a>
   </div>
 </template>
 

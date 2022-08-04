@@ -20,7 +20,7 @@
       <img class="s-avatar" src="../assets/svgs/default-user-avatar.svg" alt="user-avatar" />
       <div class="s-username">Jethro</div>
       <div class="identity-tag-wrapper">
-        <div class="identity-tag">Insider</div>
+        <div class="identity-tag">内幕人士</div>
       </div>
       <svg
         class="account-option-svg"

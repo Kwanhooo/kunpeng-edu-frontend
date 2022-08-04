@@ -3,7 +3,24 @@
     <div class="basic-footer-col">
       <div class="footer-icon-wrapper">
         <img class="l-icon" src="../assets/kunpeng_logo.png" alt="logo" />
-        <span class="footer-app-name">unPeng Edu</span>
+
+        <svg id="app-name" width="auto" height="32px">
+          a
+          <text id="logo-text" x="16%" y="80%" text-anchor="middle" disabled="true">unPeng</text>
+        </svg>
+      </div>
+      <div>
+        <div class="--slogan">
+          <p style="--content: 'Intelligent.'; --padding: 0.05em; --start-color: #007cf0; --end-color: #00dfd8">
+            Intelligent.
+          </p>
+          <p style="--content: 'Efficient.'; --padding: 0.05em; --start-color: #7928ca; --end-color: #ff0080">
+            Efficient.
+          </p>
+          <p style="--content: 'Next Gen.'; --padding: 0.05em; --start-color: #ff4d4d; --end-color: #f9cb28">
+            Next Gen.
+          </p>
+        </div>
       </div>
     </div>
     <div class="basic-footer-col">
@@ -46,7 +63,7 @@
     </div>
   </div>
   <div class="multi-func-bar">
-    <span>Copyright © 2022 KunPeng Edu Org. All rights reserved.</span>
+    <div class="copyright-text">Copyright © 2022 KunPeng Edu Org. All rights reserved.</div>
     <div class="basic-footer-repo-wrapper">
       <a href="https://github.com/Kwanhooo/kunpeng-edu-frontend" target="_blank">
         <img class="basic-footer-repo" src="../assets/svgs/github.svg" />
@@ -74,6 +91,25 @@
 <script>
 export default {
   name: 'BasicFooter',
+  mounted() {
+    const logoEl = document.getElementById('app-name')
+    // 当--app-name进入可视区域时，设置logo的class为trace
+    // 获得视口高度
+    const viewportHeight = window.innerHeight
+    // 获得body总高度
+    const bodyHeight = document.body.scrollHeight
+    // 获得.basic-layout-footer-outer的高度
+    const footerHeight = document.querySelector('.basic-layout-footer-outer').offsetHeight
+    const targetHeight = bodyHeight - viewportHeight - footerHeight + 100
+    console.log(targetHeight)
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > targetHeight) {
+        logoEl.setAttribute('class', 'trace')
+      } else {
+        logoEl.setAttribute('class', '')
+      }
+    })
+  },
 }
 </script>
 
