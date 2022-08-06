@@ -1,7 +1,6 @@
 import NProgress from 'nprogress'
-import { setDocumentTitle } from '@/utils/domUtil.js'
-// @ts-ignore
-import { documentTitleBase } from '../../config/properties.ts'
+import { setDocumentTitle } from '@/utils/domUtil'
+import { documentTitleBase } from '../../config/properties'
 
 const beforeEach = (to, from, next) => {
   NProgress.start()

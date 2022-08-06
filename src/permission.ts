@@ -69,7 +69,7 @@ const permission = {
         const routerMap = cloneDeep(asyncRouterMap)
         const accessedRouters = filterAsyncRouter(routerMap, roles)
         commit('SET_ROUTERS', accessedRouters)
-        resolve()
+        resolve(void 0)
       })
     },
   },

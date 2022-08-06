@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { constantRouterMap } from '@/config/router.config'
-import { afterEach, beforeEach } from '@/config/guard.config.ts'
+import { afterEach, beforeEach } from '@/config/guard.config'
 
 const setupRouter = function () {
   return createRouter({

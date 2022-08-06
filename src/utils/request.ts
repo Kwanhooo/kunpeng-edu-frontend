@@ -1,5 +1,5 @@
 import axios from 'axios'
-import store from '@/store'
+import store from '@/store/index'
 import storage from 'store'
 import notification from 'ant-design-vue/es/notification'
 import { VueAxios } from './axios'
@@ -9,7 +9,7 @@ import { ACCESS_TOKEN } from '@/store/mutation-types'
 const request = axios.create({
   // API 请求的默认前缀
   baseURL: process.env.VUE_APP_API_BASE_URL,
-  timeout: process.env.VUE_APP_REQUEST_TIMEOUT, // 请求超时时间，暂且定为 10s
+  timeout: Number.parseInt(process.env.VUE_APP_REQUEST_TIMEOUT), // 请求超时时间，暂且定为 10s
 })
 
 // 异常拦截处理器

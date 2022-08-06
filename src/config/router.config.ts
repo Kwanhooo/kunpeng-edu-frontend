@@ -7,7 +7,7 @@ export const constantRouterMap = [
   {
     path: '/',
     name: 'index',
-    component: () => import('@/layouts/BasicLayout'),
+    component: () => import('@/layouts/BasicLayout.vue'),
     meta: { title: '首页', keepAlive: false, icon: '', permission: ['index'] },
     children: [
       // 班级管理
@@ -21,7 +21,7 @@ export const constantRouterMap = [
             path: '/class/dashboard',
             meta: { keepAlive: false, icon: '', permission: ['class.dashboard'] },
             name: '',
-            component: () => import('@/views/class/ClassDashboard'),
+            component: () => import('@/views/class/ClassDashboard.vue'),
           },
         ],
       },
@@ -38,7 +38,7 @@ export const constantRouterMap = [
         path: '/common/login',
         name: 'login',
         meta: { title: '登入', keepAlive: false, icon: '', permission: [] },
-        component: () => import('@/views/common/accountAuthentication'),
+        component: () => import('@/views/common/accountAuthentication.vue'),
       },
       {
         path: '/common/register',
@@ -53,7 +53,7 @@ export const constantRouterMap = [
     path: '/404',
     name: '404',
     meta: { title: '走丢啦', keepAlive: false, icon: '', permission: [] },
-    component: () => import('@/views/exception/404'),
+    component: () => import('@/views/exception/404.vue'),
   },
   // 没有匹配到的路由，重定向到404
   {

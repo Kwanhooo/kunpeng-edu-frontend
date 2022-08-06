@@ -5,7 +5,7 @@ import { createApp } from 'vue'
  * 基本引入
  */
 import router from './router/router'
-import store from './store/'
+import store from './store/index'
 import { VueAxios } from './utils/request'
 
 /**
