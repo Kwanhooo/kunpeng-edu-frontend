@@ -17,7 +17,7 @@
       <a class="problemButton">登录时遇到问题？</a>
     </div>
     <div class="loginButtonContainer">
-      <button class="loginButton">登录</button>
+      <button class="loginButton" @click="handleLoginSubmit()">登录</button>
     </div>
     <div class="otherLoginTextContainer">-------------其他登录方式-------------</div>
     <div class="otherLogin">
@@ -35,14 +35,37 @@
 </template>
 
 <script>
+import store from '@/store'
+
 export default {
   name: 'loginSub',
   data() {
-    return {}
+    return {
+      isLoginError: false,
+    }
   },
   methods: {
+    handleLoginSubmit() {
+      const loginParams = { username: 'Castaway', password: '123456' }
+      store
+        .dispatch('Login', loginParams)
+        .then((res) => this.loginSuccess(res))
+        .catch((err) => this.requestFailed(err))
+        .finally(() => {})
+    },
+    loginSuccess() {
+      this.$router.push({ path: '/' })
+      setTimeout(() => {
+        this.$message.success('欢迎回来')
+      }, 1000)
+      this.isLoginError = false
+    },
+    requestFailed(err) {
+      this.isLoginError = true
+      this.$message.error('登录错误，请稍后再试')
+    },
     register() {
-      console.log('Register1')
+      // console.log('Register1')
       this.$router.push('/common/register')
     },
   },

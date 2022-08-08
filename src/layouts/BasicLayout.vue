@@ -14,7 +14,11 @@
 </template>
 
 <script>
-import { BasicHeader, BasicSubMenu, BasicFooter, PageView } from '@/layouts/index'
+// import { BasicHeader, BasicSubMenu, BasicFooter, PageView } from '@/layouts/index'
+import BasicHeader from '@/layouts/BasicHeader.vue'
+import BasicSubMenu from '@/layouts/BasicSubMenu.vue'
+import BasicFooter from '@/layouts/BasicFooter.vue'
+import PageView from '@/layouts/PageView.vue'
 
 export default {
   name: 'BasicLayout',

@@ -15,7 +15,7 @@ const userAPI = {
 
 /**
  * 登录
- *
+ * @author Kwanhooo
  * parameter: {
  *     username: '',
  *     password: '',
@@ -34,8 +34,8 @@ export function login(parameter) {
 }
 
 /**
- *
- *
+ * 获得短信验证码
+ * @author Kwanhooo
  * @param parameter
  */
 export function getSmsCaptcha(parameter) {
@@ -46,6 +46,10 @@ export function getSmsCaptcha(parameter) {
   })
 }
 
+/**
+ * 获得用户信息
+ * @author Kwanhooo
+ */
 export function getInfo() {
   return request({
     url: userAPI.UserInfo,
@@ -56,19 +60,33 @@ export function getInfo() {
   })
 }
 
-export function getCurrentUserNav() {
+/**
+ * 获得用户菜单
+ * @author Kwanhooo
+ */
+export function getCurrentUserNav(token) {
   return request({
     url: userAPI.UserMenu,
     method: 'get',
+    data: {
+      token: token,
+    },
   })
 }
 
-export function logout() {
+/**
+ * 登出
+ * @author Kwanhooo
+ */
+export function logout(token) {
   return request({
     url: userAPI.Logout,
     method: 'post',
     headers: {
       'Content-Type': 'application/json;charset=UTF-8',
+    },
+    data: {
+      token: token,
     },
   })
 }

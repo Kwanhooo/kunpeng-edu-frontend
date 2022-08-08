@@ -5,7 +5,7 @@ import { createApp } from 'vue'
  * 基本引入
  */
 import router from './router/router'
-import store from './store/index'
+import $store from './store/index'
 import { VueAxios } from './utils/request'
 
 /**
@@ -17,6 +17,19 @@ import 'element-plus/dist/index.css' // 引入element-plus样式
 import NProgress from 'nprogress' // 引入nprogress进度条
 import './assets/less/nprogress.less' // 引入nprogress进度条样式
 
+/**
+ * 权限，动态路由
+ */
+import '@/core/permission' // 权限控制以及动态路由
+// import '@/config/guard.config' // 简单路由，废弃
+
+/**
+ * 数据模拟
+ * mockjs
+ * 不允许在PROD环境下使用
+ */
+import './mock'
+
 const app = createApp(App)
 
 // 挂载 axios 到 `this.$http`（最好用这个）和 `this.axios`
@@ -26,7 +39,7 @@ app.use(VueAxios)
 app.use(router)
 
 // 挂载 Vuex
-app.use(store)
+app.use($store)
 
 // 挂载 ElementPlus
 app.use(ElementPlus)

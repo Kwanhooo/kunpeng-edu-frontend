@@ -17,10 +17,10 @@
       <path d="M16.88 3.549L7.12 20.451"></path>
     </svg>
     <div class="basic-user-info-wrapper">
-      <img class="s-avatar" :src="basicUserInfo.avatarUrl" alt="user-avatar" />
-      <div class="s-username">{{ basicUserInfo.username }}</div>
+      <img class="s-avatar" :src="getAvatar()" alt="user-avatar" />
+      <div class="s-username">{{ username }}</div>
       <div class="identity-tag-wrapper">
-        <div class="identity-tag">{{ basicUserInfo.identity }}</div>
+        <div class="identity-tag">{{ roles }}</div>
       </div>
       <svg
         class="account-option-svg"
@@ -41,14 +41,19 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import store from '../store'
 
 export default {
   name: 'BasicHeader',
   data() {},
-  computed: {
-    ...mapGetters(['basicUserInfo', '__generalModules']),
+  methods: {
+    getAvatar() {
+      return store.getters.avatar
+    },
   },
-  methods: {},
+  computed: {
+    ...mapGetters(['username', 'avatar', 'roles', '__generalModules']),
+  },
 }
 </script>
 

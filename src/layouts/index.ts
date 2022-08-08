@@ -1,7 +1,18 @@
-import BasicLayout from './BasicLayout.vue'
-import BasicHeader from './BasicHeader.vue'
-import BasicSubMenu from './BasicSubMenu.vue'
-import BasicFooter from './BasicFooter.vue'
-import PageView from '@/layouts/PageView.vue'
+export const BasicLayout = () => {
+  import('./BasicLayout.vue')
+}
+export const BasicHeader = () => {
+  import('./BasicHeader.vue')
+}
 
-export { BasicLayout, BasicHeader, BasicSubMenu, BasicFooter, PageView }
+export const BasicSubMenu = () => {
+  import('./BasicSubMenu.vue')
+}
+
+export const BasicFooter = () => {
+  import('./BasicFooter.vue')
+}
+
+export const PageView = () => {
+  import('@/layouts/PageView.vue')
+}

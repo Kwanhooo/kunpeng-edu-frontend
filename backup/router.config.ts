@@ -5,21 +5,21 @@
 export const constantRouterMap = [
   // 身份认证
   {
-    name: 'common',
     path: '/common',
-    meta: { title: '', keepAlive: false },
+    name: 'common',
+    meta: { title: '', keepAlive: false, icon: '', permission: [] },
     redirect: '/common/login',
     children: [
       {
-        name: 'login',
         path: '/common/login',
-        meta: { title: '登入', keepAlive: false },
+        name: 'login',
+        meta: { title: '登入', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/accountAuthentication.vue'),
       },
       {
-        name: 'register',
         path: '/common/register',
-        meta: { title: '注册', keepAlive: false },
+        name: 'register',
+        meta: { title: '注册', keepAlive: false, icon: '', permission: [] },
         component: () => import('@/views/common/registerSub.vue'),
       },
     ],
@@ -30,6 +30,11 @@ export const constantRouterMap = [
     name: '404',
     meta: { title: '走丢啦', keepAlive: false, icon: '', permission: [] },
     component: () => import('@/views/exception/404.vue'),
+  },
+  // 没有匹配到的路由，重定向到404
+  {
+    path: '/:catchAll(.*)',
+    redirect: '/404',
   },
 ]
 

@@ -6,7 +6,7 @@ import cloneDeep from 'lodash.clonedeep'
  *
  * @param permission
  * @param route
- * @return {boolean}
+ * @returns {boolean}
  */
 function hasPermission(permission, route) {
   if (route.meta && route.meta.permission) {
@@ -23,7 +23,7 @@ function hasPermission(permission, route) {
 }
 
 /**
- * 使用该方法可过滤角色不存在的菜单
+ * 单账户多角色时，使用该方法可过滤角色不存在的菜单
  *
  * @param roles
  * @param route
