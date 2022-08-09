@@ -1,4 +1,4 @@
-# 鲲鹏智能学考
+# 鲲鹏智能学考  ![visitors](https://visitor-badge.glitch.me/badge?page_id=Kwanhooo.kunpeng-edu-frontend)
 ### —— KunPeng Edu
 
 _本项目的开发工作起始于：2022年7月18日 星期一_
@@ -12,29 +12,29 @@ _本项目的开发工作起始于：2022年7月18日 星期一_
 ## 💻 开发技术
 
 ### 基本
-  - Vue.js 3
-  - Vue-CLI
-  - Vue Router Next
-  - Vuex
-  - Babel
-  - Less
-  - Axios
+- Vue.js 3
+- Vue-CLI
+- Vue Router Next
+- Vuex
+- Babel
+- Less
+- Axios
 
 ### 代码规范化工具
-  - ESLint 
-  - Prettier
-  - Stylelint
-  - Commitlint
-  - Husky Git Hooks
-  - Lint-staged
-  - editorconfig
+- ESLint
+- Prettier
+- Stylelint
+- Commitlint
+- Husky Git Hooks
+- Lint-staged
+- editorconfig
 
 ### 其它开发依赖
-  - lodash.clonedeep (深拷贝)
-  - spacejs (测量工具)
-  - mockjs (模拟数据)
-  - mitt (传递)
-  - store (localStorage 封装)
+- lodash.clonedeep (深拷贝)
+- spacejs (测量工具)
+- mockjs (模拟数据)
+- mitt (传递)
+- store (localStorage 封装)
 
 ## 🦾 源码构建
 ### 1. 安装依赖
@@ -76,17 +76,17 @@ git push
 ```
 
 ## 🔨 部署方案
-  1. ### 开发环境 (env.development)
-     
-     - 主机：*vercel.com*
-     - 访问方式：*https://kp.0xCAFEBABE.cn*
-     - 方案：透过***Github***自动化构建，部署至***Vercel***；通过Nginx反向代理到***Vercel***主机
-     
-  2. ### 生产环境 (env.prod)
-     
-     - 主机：Tencent LightHouse
-     - 访问方式：*https://kunpeng.0xCAFEBABE.cn*
-     - 方案：打包容器镜像，部署至主机的Docker容器中
+1. ### 开发环境 (env.development)
+
+  - 主机：*vercel.com*
+  - 访问方式：*https://kp.0xCAFEBABE.cn*
+  - 方案：透过***Github***自动化构建，部署至***Vercel***；通过Nginx反向代理到***Vercel***主机
+
+2. ### 生产环境 (env.prod)
+
+  - 主机：Tencent LightHouse
+  - 访问方式：*https://kunpeng.0xCAFEBABE.cn*
+  - 方案：打包容器镜像，部署至主机的Docker容器中
 
 
 ## 🏃 状态

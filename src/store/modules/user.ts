@@ -54,7 +54,7 @@ const user = {
             const data = response.data
             commit('SET_TOKEN', data.token)
             // @ts-ignore
-            resolve()
+            resolve(data)
           })
           .catch((error) => {
             reject(error)
@@ -109,7 +109,6 @@ const user = {
           .catch((err) => {
             console.log('登出失败', err)
           })
-          .finally(() => {})
       })
     },
   },

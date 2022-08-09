@@ -45,7 +45,7 @@ app.use($store)
 app.use(ElementPlus)
 
 // 挂载NProgress
-app.NProgress = NProgress
+app['NProgress'] = NProgress
 
 // 挂载 根组件
 app.mount('#app')

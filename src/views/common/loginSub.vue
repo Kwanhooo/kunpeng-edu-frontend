@@ -48,23 +48,24 @@ export default {
   },
   methods: {
     handleLoginSubmit() {
-      const loginParams = { username: this.inputUsername, password: this.inputPassword }
+      const loginParams = { account: this.inputUsername, password: this.inputPassword }
       store
         .dispatch('Login', loginParams)
         .then((res) => this.loginSuccess(res))
         .catch((err) => this.requestFailed(err))
-        .finally(() => {})
     },
-    loginSuccess() {
+    loginSuccess(res) {
       this.$router.push({ path: '/' })
+      console.log(res)
       setTimeout(() => {
-        this.$message.success('欢迎回来')
+        this.$message.success(res)
       }, 1000)
       this.isLoginError = false
     },
     requestFailed(err) {
       this.isLoginError = true
-      this.$message.error('登录错误，请稍后再试')
+      this.$message.error(err)
+      console.log(err)
     },
     register() {
       this.$router.push('/common/register')

@@ -13,7 +13,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-router.afterEach((to, from) => {
+router.afterEach((to) => {
   NProgress.done()
   // 设定页面标题
   setDocumentTitle(to.meta.title + documentTitleBase)

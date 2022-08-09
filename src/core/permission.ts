@@ -11,7 +11,6 @@ import { documentTitleBase } from '../../config/properties'
 
 import { ACCESS_TOKEN } from '@/store/mutation-types'
 import { whiteList } from '@/config/router.config'
-import app from '@/App.vue'
 import { generateAsyncDynamicRouter } from '@/router/dynamic-router'
 
 const defaultRoutePath = '/'
@@ -36,7 +35,7 @@ router.beforeEach((to, from, next) => {
         // 则请求用户角色，然后生成动态路由
         store
           .dispatch('GetInfo')
-          .then((res) => {
+          .then(() => {
             // 生成动态路由
             // console.log('::BEFORE::', router.getRoutes())
             generateAsyncDynamicRouter(token).then((routers) => {
@@ -63,7 +62,7 @@ router.beforeEach((to, from, next) => {
             })
           })
           .catch(() => {
-            app.$message.error('请求用户信息失败，请检查网络...')
+            // app['$message'].error('请求用户信息失败，请检查网络...')
             // 登出，清空所有信息
             store.dispatch('Logout').then(() => {
               next({ path: authRoutePath, query: { redirect: to.fullPath } })

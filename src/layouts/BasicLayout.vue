@@ -45,7 +45,7 @@ export default {
         if (!isDown) return
         isDown = false
         // 删除navOuter中的img元素
-        const iconToRemove = document.querySelector('#dynamic-icon')
+        // const iconToRemove = document.querySelector('#dynamic-icon')
         // iconToRemove.remove()
         // icon.style.display = 'none'
         icon.style.opacity = '0'

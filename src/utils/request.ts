@@ -8,8 +8,9 @@ import { ACCESS_TOKEN } from '@/store/mutation-types'
 // 创建 axios 实例
 const request = axios.create({
   // API 请求的默认前缀
-  baseURL: process.env.VUE_APP_API_BASE_URL,
-  timeout: Number.parseInt(process.env.VUE_APP_REQUEST_TIMEOUT), // 请求超时时间，暂且定为 10s
+  baseURL: import.meta.env.VUE_APP_API_BASE_URL,
+  // @ts-ignore
+  timeout: Number.parseInt(import.meta.env.VUE_APP_REQUEST_TIMEOUT), // 请求超时时间，暂且定为 10s
 })
 
 // 异常拦截处理器

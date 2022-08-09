@@ -1,6 +1,7 @@
 import Mock from 'mockjs2'
 import { builder } from '../util'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const info = (options) => {
   const userInfo = {
     id: Mock.mock('@guid'),
@@ -29,6 +30,7 @@ const info = (options) => {
  * @param {*} options
  * @returns
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const userNav = (options) => {
   const nav = [
     {
@@ -44,7 +46,7 @@ const userNav = (options) => {
       path: '/class/dashboard',
       parentId: 1000,
       id: 1001,
-      meta: { keepAlive: false, icon: '', permission: [''] },
+      meta: { title: '班级管理', keepAlive: false, icon: '', permission: [''] },
       component: 'ClassDashboard',
     },
   ]
@@ -52,5 +54,5 @@ const userNav = (options) => {
 }
 
 // API 拦截、映射
-Mock.mock(/\/api\/user\/info/, 'get', info)
-Mock.mock(/\/api\/user\/nav/, 'get', userNav)
+Mock.mock(/\/user\/info/, 'get', info)
+Mock.mock(/\/user\/nav/, 'get', userNav)

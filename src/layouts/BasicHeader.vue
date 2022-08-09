@@ -45,7 +45,6 @@ import store from '../store'
 
 export default {
   name: 'BasicHeader',
-  data() {},
   methods: {
     getAvatar() {
       return store.getters.avatar

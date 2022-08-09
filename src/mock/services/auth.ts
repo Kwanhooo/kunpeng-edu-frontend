@@ -1,35 +1,54 @@
 import Mock from 'mockjs2'
+import { Insider, Teacher, Student, Admin } from './structure/user.ds'
 import { builder, getBody } from '../util'
 
-const username = ['insider', 'admin'] // 允许的用户名
-const password = ['123456', '000000'] // 允许的密码
+// 开发者
+const insiderAccount = { account: 'insider', email: 'insider@kunpeng.cn', phone: '13711111111', password: '000000' }
+// 教师
+const teacherAccount = { account: 'teacher', email: 'teacher@kunpeng.cn', phone: '13722222222', password: '000000' }
+// 学生
+const studentAccount = { account: 'student', email: 'student@kunpeng.cn', phone: '13733333333', password: '000000' }
+// 管理员
+const adminAccount = { account: 'admin', email: 'admin@kunpeng.cn', phone: '13744444444', password: '000000' }
 
 const login = (options) => {
   const body = getBody(options)
-  if (!username.includes(body.username) || !password.includes(body.password)) {
-    return builder({ isLogin: true }, '账户或密码错误', 401)
+  console.log('body', body)
+  // 开发者
+  if (
+    (body.account === insiderAccount.account ||
+      body.account === insiderAccount.email ||
+      body.account === insiderAccount.phone) &&
+    body.password === insiderAccount.password
+  ) {
+    const loginUser = new Insider(insiderAccount.account, insiderAccount.email, insiderAccount.phone)
+    return builder(loginUser, '欢迎回来' + loginUser.name, 200, { 'Custom-Header': Mock.mock('@guid') })
+  } else if (
+    (body.account === teacherAccount.account ||
+      body.account === teacherAccount.email ||
+      body.account === teacherAccount.phone) &&
+    body.password === teacherAccount.password
+  ) {
+    const loginUser = new Teacher(teacherAccount.account, teacherAccount.email, teacherAccount.phone)
+    return builder(loginUser, '欢迎回来' + loginUser.name, 200, { 'Custom-Header': Mock.mock('@guid') })
+  } else if (
+    (body.account === studentAccount.account ||
+      body.account === studentAccount.email ||
+      body.account === studentAccount.phone) &&
+    body.password === studentAccount.password
+  ) {
+    const loginUser = new Student(studentAccount.account, studentAccount.email, studentAccount.phone)
+    return builder(loginUser, '欢迎回来' + loginUser.name, 200, { 'Custom-Header': Mock.mock('@guid') })
+  } else if (
+    (body.account === adminAccount.account ||
+      body.account === adminAccount.email ||
+      body.account === adminAccount.phone) &&
+    body.password === adminAccount.password
+  ) {
+    const loginUser = new Admin(adminAccount.account, adminAccount.email, adminAccount.phone)
+    return builder(loginUser, '欢迎回来' + loginUser.name, 200, { 'Custom-Header': Mock.mock('@guid') })
   }
-
-  return builder(
-    {
-      id: Mock.mock('@guid'),
-      username: Mock.mock('@name'),
-      password: '',
-      avatarUrl: 'https://cloud.0xcafebabe.cn/img-host/default-user-avatar.svg',
-      status: 1,
-      telephone: '18570757570',
-      lastLoginIp: Mock.mock('@ip'),
-      lastLoginTime: 1534837621348,
-      createTime: 1497160610259,
-      deleted: 0,
-      roleId: 'insider',
-      role: '内幕人士',
-      token: '4291d7da9005377ec9aec4a71ea837f',
-    },
-    '',
-    200,
-    { 'Custom-Header': Mock.mock('@guid') }
-  )
+  return builder({}, '账号或密码错误，请重试', 401)
 }
 
 const logout = () => {

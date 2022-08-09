@@ -51,6 +51,7 @@ export const generateAsyncDynamicRouter = (token) => {
         const childrenNav = []
         listToTree(data, childrenNav, 0)
         rootRouter.children = childrenNav
+        // @ts-ignore
         menuNav.push(rootRouter)
         // @ts-ignore
         const routers = generator(menuNav)
@@ -73,6 +74,7 @@ export const generateAsyncDynamicRouter = (token) => {
  */
 export const generator = (routerMap, parent) => {
   return routerMap.map((item) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
     const currentRouter = {
       // 如果路由规则设置了path，则作为默认path，否则动态拼接生成一个path，如：/父path/子path
