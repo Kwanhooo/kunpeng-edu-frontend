@@ -7,10 +7,10 @@
       <div class="loginTitle">用户登录</div>
     </div>
     <div class="emailInputContainer">
-      <input type="text" class="emailInput" placeholder="📫Email" v-model="inputUsername" />
+      <input type="text" class="emailInput" placeholder="📫Email（用 insider 登录）" v-model="inputUsername" />
     </div>
     <div class="passwordInputContainer" ng-init="pswShow = false">
-      <input type="password" class="passwordInput" placeholder="🔒Password" v-model="inputPassword" />
+      <input type="password" class="passwordInput" placeholder="🔒Password（用 123456 登录）" v-model="inputPassword" />
     </div>
     <div class="registerButtonContainer">
       <a class="registerButton" @click="register()">立即注册→</a>
@@ -67,7 +67,6 @@ export default {
       this.$message.error('登录错误，请稍后再试')
     },
     register() {
-      // console.log('Register1')
       this.$router.push('/common/register')
     },
   },

@@ -26,7 +26,7 @@ import '@/core/permission' // 权限控制以及动态路由
 /**
  * 数据模拟
  * mockjs
- * 不允许在PROD环境下使用
+ * 只有在 VUE_APP_PREVIEW === 'true' 时才会启动
  */
 import './mock'
 
