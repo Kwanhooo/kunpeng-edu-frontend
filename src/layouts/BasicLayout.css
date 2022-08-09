@@ -102,7 +102,7 @@ html {
 .basic-layout-sub-menu-outer {
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 150;
   display: flex;
   height: 51px;
   background: #fff;

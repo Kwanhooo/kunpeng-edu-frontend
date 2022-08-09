@@ -7,10 +7,10 @@
       <div class="loginTitle">用户登录</div>
     </div>
     <div class="emailInputContainer">
-      <input type="text" class="emailInput" placeholder="📫Email" />
+      <input type="text" class="emailInput" placeholder="📫Email" v-model="inputUsername" />
     </div>
     <div class="passwordInputContainer" ng-init="pswShow = false">
-      <input type="password" class="passwordInput" placeholder="🔒Password" />
+      <input type="password" class="passwordInput" placeholder="🔒Password" v-model="inputPassword" />
     </div>
     <div class="registerButtonContainer">
       <a class="registerButton" @click="register()">立即注册→</a>
@@ -42,11 +42,13 @@ export default {
   data() {
     return {
       isLoginError: false,
+      inputUsername: '',
+      inputPassword: '',
     }
   },
   methods: {
     handleLoginSubmit() {
-      const loginParams = { username: 'Castaway', password: '123456' }
+      const loginParams = { username: this.inputUsername, password: this.inputPassword }
       store
         .dispatch('Login', loginParams)
         .then((res) => this.loginSuccess(res))

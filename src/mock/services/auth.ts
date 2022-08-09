@@ -1,7 +1,7 @@
 import Mock from 'mockjs2'
 import { builder, getBody } from '../util'
 
-const username = ['Castaway', 'admin'] // 允许的用户名
+const username = ['insider', 'admin'] // 允许的用户名
 const password = ['123456', '000000'] // 允许的密码
 
 const login = (options) => {
