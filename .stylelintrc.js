@@ -7,7 +7,7 @@ module.exports = {
     'string-quotes': 'double', // 单引号
     'at-rule-empty-line-before': null,
     'at-rule-no-unknown': null,
-    'at-rule-name-case': 'lower', // 指定@规则名的大小写
+    'at-rule-name-case': null, // 指定@规则名的大小写
     'length-zero-no-unit': true, // 禁止零长度的单位（可自动修复）
     'shorthand-property-no-redundant-values': true, // 简写属性
     'number-leading-zero': 'never', // 小数不带0

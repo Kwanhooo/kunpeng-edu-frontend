@@ -1,4 +1,5 @@
 import * as loginService from '@/api/login'
+import store from '../store'
 
 const constantRouterComponents = {
   /**
@@ -6,6 +7,10 @@ const constantRouterComponents = {
    */
   BasicLayout: () => import('@/layouts/BasicLayout.vue'),
   PageView: () => import('@/layouts/PageView.vue'),
+  /**
+   * 通用套件
+   */
+  Card: () => import('@/components/Card/Card.vue'),
   /**
    * 异常页面
    */
@@ -16,8 +21,37 @@ const constantRouterComponents = {
    * @constructor
    */
   // 班级管理
-  ClassDashboard: () => import('@/views/class/ClassDashboard.vue'),
+  ClassDashboard: () => import('@/views/class/dashboard/ClassDashboard.vue'),
+  ClassBind: () => import('@/views/class/bind/ClassBind.vue'),
 }
+
+const generalModule = [
+  // 通用功能
+  {
+    name: 'notification',
+    path: '/notification',
+    meta: { title: '通知中心', keepAlive: false },
+    component: () => import('@/views/general/notification/Notification.vue'),
+  },
+  {
+    name: 'schedule',
+    path: '/schedule',
+    meta: { title: '日程', keepAlive: false },
+    component: () => import('@/views/general/schedule/Schedule.vue'),
+  },
+  {
+    name: 'settings',
+    path: '/settings',
+    meta: { title: '设定', keepAlive: false },
+    component: () => import('@/views/general/settings/Settings.vue'),
+  },
+  {
+    name: 'support',
+    path: '/support',
+    meta: { title: '支持', keepAlive: false },
+    component: () => import('@/views/general/support/Support.vue'),
+  },
+]
 
 // 根
 const rootRouter = {
@@ -51,11 +85,17 @@ export const generateAsyncDynamicRouter = (token) => {
         const childrenNav = []
         listToTree(data, childrenNav, 0)
         rootRouter.children = childrenNav
+        generalModule.forEach((item) => {
+          // @ts-ignore
+          rootRouter.children.push(item)
+        })
         // @ts-ignore
         menuNav.push(rootRouter)
         // @ts-ignore
         const routers = generator(menuNav)
         routers.push(notFoundRouter)
+        // 根据路由生成导航栏组
+        store.commit('SET_MAIN_NAV', data)
         resolve(routers)
       })
       .catch((err) => {

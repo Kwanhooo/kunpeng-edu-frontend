@@ -47,6 +47,8 @@ router.beforeEach((to, from, next) => {
                 // console.log(r)
                 router.addRoute(r)
               })
+              // 加载子导航
+              store.commit('SET_SUB_NAV', to.path)
               // 打印路由表
               // console.log('::AFTER::', router.getRoutes())
               // 请求带有 redirect 重定向时，登录自动重定向到该地址
@@ -89,7 +91,7 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-router.afterEach((to) => {
+router.afterEach(() => {
   NProgress.done()
-  setDocumentTitle(to.meta.title + documentTitleBase)
+  // setDocumentTitle(to.meta.title + documentTitleBase)
 })

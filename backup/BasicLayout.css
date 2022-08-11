@@ -187,35 +187,20 @@ html {
   background-color: #fff;
   align-items: center;
 }
-.general-module-icon {
-  width: auto;
-  max-height: 14px;
-}
-.basic-link-nav-item-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.basic-link-nav-item {
-  display: flex;
-  padding: 0 0.4rem;
-  margin: 0 0.7rem;
-  border-radius: 10px;
-  align-items: center;
-  transition: 0.2s ease-in-out;
-}
-.basic-link-nav-item:hover {
-  color: white;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 24px;
-}
 .link-nav {
-  padding: 5px 0;
-  margin: 0 0.4rem;
+  padding: 5px 10px;
+  margin: 0 0.6rem;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   pointer-events: all;
   cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.link-nav:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 24px;
 }
 .basic-layout-footer-outer {
   width: 100vw;
@@ -317,7 +302,7 @@ div .--slogan p {
   padding: 3px 0;
   filter: brightness(0);
   animation: color-cycle 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(90deg, var(--start-color), var(--end-color));
 }
@@ -401,8 +386,6 @@ div .--slogan p:nth-child(3) {
   margin: 0 20px 0 -12px;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   font-size: 14px;
-  pointer-events: all;
-  cursor: pointer;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
 }
@@ -419,5 +402,82 @@ div .--slogan p:nth-child(3) {
   margin: 5px inherit;
   font-size: 18px;
   font-weight: bold;
+}
+.section-process {
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #c9c9c9;
+}
+.section-process .process-steps-container .process-step-container .process-step-title-container {
+  position: relative;
+  margin-top: -16px;
+}
+.section-process .process-steps-container .process-step-container .process-step-title-container .process-step-title,
+.section-process .process-steps-container .process-step-container .process-step-title-container .process-step-title-overlay {
+  margin: 0.8rem 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+.section-process .process-steps-container .process-step-container .process-step-title-container .process-step-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  padding-right: 30px;
+  margin: 0;
+  opacity: 1;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-process .process-steps-container .process-step-container.process-step-1 .process-step-title-overlay {
+  background-image: linear-gradient(90deg, var(--gradient-color-1), var(--gradient-color-2));
+  animation: animated-gradient-title-1 8s infinite;
+}
+.section-process .process-steps-container .process-step-container.process-step-2 .process-step-title-overlay {
+  background-image: linear-gradient(90deg, var(--gradient-color-2), var(--gradient-color-3));
+  animation: animated-gradient-title-2 8s infinite;
+}
+.section-process .process-steps-container .process-step-container.process-step-3 .process-step-title-overlay {
+  background-image: linear-gradient(90deg, var(--gradient-color-3), var(--gradient-color-1));
+  animation: animated-gradient-title-3 8s infinite;
+}
+@keyframes animated-gradient-title-1 {
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+@keyframes animated-gradient-title-2 {
+  0%,
+  16.667%,
+  66.667%,
+  100% {
+    opacity: 0;
+  }
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes animated-gradient-title-3 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=BasicLayout.css.map */

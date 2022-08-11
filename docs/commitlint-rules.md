@@ -2,7 +2,7 @@
 
 ### 作用
 
-Commitlint 会在git commit时检查message是否符合规则（Y => 成功提交，N => 由Husky阻断）
+Commitlint 会在 git commit 时检查 message 是否符合规则（Y => 成功提交，N => 由 Husky 阻断）
 
 ### 格式
 

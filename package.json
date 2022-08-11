@@ -1,5 +1,5 @@
 {
-  "name": "vue-init",
+  "name": "kunpeng_front",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "lint:js:fix": "eslint src/**/*.js --fix",
-    "lint:ss:fix": "stylelint src/**/*.*ss --fix  --custom-syntax postcss-less",
+    "lint:*ss:fix": "stylelint src/**/*.*ss --fix  --fix",
     "lint:prettier:check": "npx prettier --check .",
     "lint:prettier:format": "npx prettier --write .",
     "prepare": "husky install",

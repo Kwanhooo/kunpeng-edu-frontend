@@ -34,7 +34,14 @@
       </svg>
     </div>
     <div class="basic-link-nav">
-      <a class="link-nav" v-for="module in __generalModules" :key="module">{{ module }}</a>
+      <div class="basic-link-nav-item" v-for="module in __generalModules" :key="module">
+        <div class="basic-link-nav-item-inner">
+          <img :src="module.icon" class="general-module-icon" />
+          <a class="link-nav" :href="module.path">
+            {{ module.title }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>

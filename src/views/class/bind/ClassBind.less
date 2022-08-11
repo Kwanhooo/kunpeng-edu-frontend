@@ -1,0 +1,125 @@
+@fontSans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+@baseFontSize: 14px;
+@baseFontSizeLarger: 17px;
+@titleSize: 21px;
+@basePadding: 1.5rem;
+@baseBorderRadius: 5px;
+
+@lightestColor: #ffffff;
+@lightColor: #fafafa;
+@deepColor: #eaeaea;
+@deeperColor: #666666;
+@deepestColor: #000000;
+
+.bind-op-card:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.bind-op-card:last-child {
+  margin-bottom: 3rem;
+}
+
+.bind-tips {
+  font-size: 14px;
+}
+
+.bind-code-wrapper {
+  width: 15rem;
+  padding: 2px 3px;
+  margin: 1rem 0 0;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+
+  .bind-code-input {
+    width: 90%;
+    height: 30px;
+    padding-left: 1.5rem;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1.5rem;
+    color: #333;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+  }
+}
+
+.bind-code-focus {
+  border: 1px solid #000;
+}
+
+.bind-hr {
+  height: 1px;
+  margin: 1.5rem 0;
+  background-color: @deepColor;
+  border: none;
+}
+
+.reg-class-divide {
+  margin: 1.5rem 0;
+}
+
+.reg-class-form-wrapper {
+  padding: 1.5rem;
+  border: 1px solid @deepColor;
+  border-radius: 5px;
+
+  .reg-class-form-item:not(:first-child) {
+    margin-top: 1.1rem;
+  }
+
+  .reg-class-form-item {
+    .reg-class-form-label {
+      margin-bottom: 5px;
+      margin-left: 10px;
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    .reg-class-form-input {
+      width: 15rem;
+      height: 36px;
+      padding: 0 10px;
+      font-family: @fontSans;
+      font-size: 17px;
+      font-weight: 600;
+      border: 1px solid @deepColor;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+      outline-style: none;
+    }
+
+    .reg-class-form-textarea {
+      max-width: 20rem;
+      max-height: 10rem;
+      min-width: 20rem;
+      min-height: 4rem;
+      padding: 0 10px;
+      font-family: @fontSans;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid @deepColor;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+      outline-style: none;
+    }
+
+    .reg-class-form-input:focus {
+      border: 1px solid @deepestColor;
+    }
+
+    .reg-class-form-textarea:focus {
+      border: 1px solid @deepestColor;
+    }
+  }
+}
+
+.reg-class-divide-title {
+  margin-left: 1.5rem;
+  font-family: @fontSans;
+  font-size: @baseFontSizeLarger;
+  font-weight: 600;
+}

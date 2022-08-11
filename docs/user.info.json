@@ -54,13 +54,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "query",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "query", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -95,13 +89,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "query",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "query", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -136,13 +124,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "query",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "query", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -177,13 +159,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "query",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "query", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -213,12 +189,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "import",
-          "get",
-          "update"
-        ],
+        "actionList": ["add", "import", "get", "update"],
         "dataAccess": null
       },
       {
@@ -253,13 +224,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "get",
-          "query",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "get", "query", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -294,13 +259,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "query",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "query", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -330,12 +289,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -365,12 +319,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "get",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "get", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -405,13 +354,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "get",
-          "query",
-          "update",
-          "delete"
-        ],
+        "actionList": ["add", "get", "query", "update", "delete"],
         "dataAccess": null
       },
       {
@@ -451,14 +394,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "import",
-          "get",
-          "update",
-          "delete",
-          "export"
-        ],
+        "actionList": ["add", "import", "get", "update", "delete", "export"],
         "dataAccess": null
       },
       {
@@ -498,14 +434,7 @@
             "defaultCheck": false
           }
         ],
-        "actionList": [
-          "add",
-          "import",
-          "get",
-          "update",
-          "delete",
-          "export"
-        ],
+        "actionList": ["add", "import", "get", "update", "delete", "export"],
         "dataAccess": null
       }
     ],

@@ -9,31 +9,17 @@
         </svg>
       </div>
       <div>
-        <div style="height: 0.8rem"></div>
-        <section class="section-process" style="margin-left: 0.2rem">
-          <div class="section-container">
-            <div class="process-steps-container container-medium with-padding">
-              <div class="process-step-container process-step-1">
-                <div class="process-step-title-container">
-                  <h1 class="process-step-title">Intelligent.</h1>
-                  <div class="process-step-title-overlay">Intelligent.</div>
-                </div>
-              </div>
-              <div class="process-step-container process-step-2">
-                <div class="process-step-title-container">
-                  <h1 class="process-step-title">Efficient.</h1>
-                  <div class="process-step-title-overlay">Efficient.</div>
-                </div>
-              </div>
-              <div class="process-step-container process-step-3">
-                <div class="process-step-title-container">
-                  <h1 class="process-step-title">Next Gen.</h1>
-                  <div class="process-step-title-overlay">Next Gen.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div class="--slogan">
+          <p style="--content: 'Intelligent.'; --padding: 0.05em; --start-color: #007cf0; --end-color: #00dfd8">
+            Intelligent.
+          </p>
+          <p style="--content: 'Efficient.'; --padding: 0.05em; --start-color: #7928ca; --end-color: #ff0080">
+            Efficient.
+          </p>
+          <p style="--content: 'Next Gen.'; --padding: 0.05em; --start-color: #ff4d4d; --end-color: #f9cb28">
+            Next Gen.
+          </p>
+        </div>
       </div>
     </div>
     <div class="basic-footer-col">

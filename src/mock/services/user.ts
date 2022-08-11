@@ -46,8 +46,16 @@ const userNav = (options) => {
       path: '/class/dashboard',
       parentId: 1000,
       id: 1001,
-      meta: { title: '班级管理', keepAlive: false, icon: '', permission: [''] },
+      meta: { title: '班级总览', keepAlive: false, icon: '', permission: [''] },
       component: 'ClassDashboard',
+    },
+    {
+      name: 'class-bind',
+      path: '/class/bind',
+      parentId: 1000,
+      id: 1002,
+      meta: { title: '班级绑定', keepAlive: false, icon: '', permission: [''] },
+      component: 'ClassBind',
     },
   ]
   return builder(nav, '获取用户路由成功')

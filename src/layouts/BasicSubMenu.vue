@@ -8,12 +8,14 @@
       style="margin-top: 0.5rem; margin-right: 0.5rem"
     />
     <a
-      :class="{ '--tab': true, '--is-active': activeIndex === index }"
-      v-for="(module, index) in __teacherModules"
+      :class="{ '--tab': true, '--is-active': isActive(nav.path) }"
+      v-for="(nav, index) in mainNav"
       :key="index"
-      @click="onActiveModuleChange(module, index)"
+      @click="onActiveModuleChange(nav, index)"
+      :id="nav.path"
+      :href="nav.path"
     >
-      {{ module }}
+      {{ nav.title }}
     </a>
   </div>
 </template>
@@ -29,21 +31,26 @@ export default {
     }
   },
   methods: {
-    onActiveModuleChange(module, index) {
+    onActiveModuleChange(nav, index) {
       this.activeIndex = index
-      // this.$store.commit('setActiveModule', module)
-      // this.$router.push(module.path)
+    },
+    isActive(path) {
+      if (path === '/') {
+        if (this.$route.path === '/') return true
+      } else if (this.$route.path.startsWith(path)) {
+        return true
+      }
+      return false
     },
   },
   computed: {
-    ...mapGetters(['__teacherModules']),
+    ...mapGetters(['mainNav']),
   },
 }
 </script>
 
 <style scoped>
 .dy-icon {
-  /*向上平移32px*/
   opacity: 0;
 }
 </style>

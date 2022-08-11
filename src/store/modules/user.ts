@@ -15,10 +15,28 @@ const user = {
     roles: '',
     info: {},
 
-    // TODO: @REMOVE_IN_PROD (for mock only)
-    __generalModules: ['🔔 通知', '📅 日程', '💻 设定', '💬 支持'],
-    __teacherModules: ['首页', '班级管理', '学情分析', '考试管理', '试题库', '工作流'],
-    __classManagementSubs: ['班级设定', '成员管理', '考试编排', '班级课程', '成绩管理'],
+    __generalModules: [
+      {
+        title: '通知',
+        icon: '../src/assets/svgs/notification.svg',
+        path: '/notification',
+      },
+      {
+        title: '日程',
+        icon: '../src/assets/svgs/schedule.svg',
+        path: '/schedule',
+      },
+      {
+        title: '设定',
+        icon: '../src/assets/svgs/settings.svg',
+        path: '/settings',
+      },
+      {
+        title: '支持',
+        icon: '../src/assets/svgs/support.svg',
+        path: '/support',
+      },
+    ],
   },
   mutations: {
     SET_TOKEN: (state, token) => {

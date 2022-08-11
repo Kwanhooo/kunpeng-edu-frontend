@@ -1,0 +1,72 @@
+@fontSans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+  'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+@baseFontSize: 14px;
+@baseFontSizeLarger: 17px;
+@titleSize: 21px;
+@basePadding: 1.5rem;
+@baseBorderRadius: 5px;
+
+@lightestColor: #ffffff;
+@lightColor: #fafafa;
+@deepColor: #eaeaea;
+@deeperColor: #666666;
+@deepestColor: #000000;
+
+.mw-card-wrapper {
+  display: flex;
+  background: @lightestColor;
+  border: @deepColor 1px solid;
+  border-radius: @baseBorderRadius;
+  flex-direction: column;
+
+  .mw-card-display {
+    padding: @basePadding;
+
+    .mw-card-title {
+      margin-bottom: 10px;
+      font-family: @fontSans;
+      font-size: @titleSize;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: @deepestColor;
+    }
+
+    .mw-card-main {
+      margin-top: 1rem;
+    }
+  }
+
+  .mw-card-func-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: @deepColor;
+
+    .mw-card-description {
+      font-family: @fontSans;
+      font-size: @baseFontSize;
+    }
+
+    .mw-card-button {
+      position: absolute;
+      right: @basePadding;
+      padding: .3rem 1.3rem;
+      font-family: @fontSans;
+      font-size: @baseFontSize;
+      font-weight: 500;
+      color: @lightestColor;
+      background: @deepestColor;
+      border: 1px solid @deeperColor;
+      border-radius: @baseBorderRadius;
+      align-content: center;
+      transition: all .2s ease-in-out;
+    }
+
+    .mw-card-button:hover {
+      color: @deepestColor;
+      background: @lightColor;
+    }
+  }
+}

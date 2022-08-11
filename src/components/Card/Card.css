@@ -1,0 +1,51 @@
+.mw-card-wrapper {
+  display: flex;
+  background: #ffffff;
+  border: #eaeaea 1px solid;
+  border-radius: 5px;
+  flex-direction: column;
+}
+.mw-card-wrapper .mw-card-display {
+  padding: 1.5rem;
+}
+.mw-card-wrapper .mw-card-display .mw-card-title {
+  margin-bottom: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.mw-card-wrapper .mw-card-display .mw-card-main {
+  margin-top: 1rem;
+}
+.mw-card-wrapper .mw-card-func-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #eaeaea;
+}
+.mw-card-wrapper .mw-card-func-bar .mw-card-description {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+.mw-card-wrapper .mw-card-func-bar .mw-card-button {
+  position: absolute;
+  right: 1.5rem;
+  padding: 0.3rem 1.3rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid #666666;
+  border-radius: 5px;
+  align-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.mw-card-wrapper .mw-card-func-bar .mw-card-button:hover {
+  color: #000000;
+  background: #fafafa;
+}
+/*# sourceMappingURL=Card.css.map */

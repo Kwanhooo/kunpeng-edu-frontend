@@ -8,12 +8,13 @@
     <div class="basic-layout-sidebar-wrapper">
       <div class="basic-layout-sidebar-inner">
         <div
-          :class="{ 'basic-layout-sidebar-item': true, 'active-side-bar-item': activeSubIndex === index }"
-          v-for="(sub, index) in __classManagementSubs"
+          :class="{ 'basic-layout-sidebar-item': true, 'active-side-bar-item': isActive(sub.path) }"
+          v-for="(sub, index) in subNav"
           :key="index"
-          @click="onActiveSubChange(sub, index)"
+          @click="onActiveSubChange(sub.path)"
+          :id="sub.path"
         >
-          {{ sub }}
+          {{ sub.title }}
         </div>
       </div>
     </div>
@@ -35,12 +36,19 @@ export default {
     }
   },
   methods: {
-    onActiveSubChange(sub, index) {
-      this.activeSubIndex = index
+    onActiveSubChange(path) {
+      this.$router.push(path)
+    },
+    isActive(path) {
+      // 如果path带有参数，则将他去除
+      if (path.indexOf('?') > -1) {
+        path = path.split('?')[0]
+      }
+      return this.$route.path === path
     },
   },
   computed: {
-    ...mapGetters(['__classManagementSubs']),
+    ...mapGetters(['subNav']),
   },
   mounted() {
     this.pageTitle = this.$route.meta.title
