@@ -4,6 +4,7 @@ import application from './modules/application'
 import asyncRouter from '@/store/modules/async-router'
 import permission from '@/store/modules/async-router'
 import user from './modules/user'
+import teacher from './modules/teacher'
 
 import state from './state'
 import getters from './getters'
@@ -16,6 +17,7 @@ const store = createStore({
     asyncRouter,
     permission,
     user,
+    teacher,
   },
   state: state,
   getters: getters,

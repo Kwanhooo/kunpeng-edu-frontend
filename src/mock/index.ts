@@ -5,6 +5,7 @@ import Mock from 'mockjs2'
 console.log('Mock is mounting')
 import './services/auth'
 import './services/user'
+import './services/teacher'
 
 Mock.setup({
   timeout: 200, // 模拟请求延迟时间

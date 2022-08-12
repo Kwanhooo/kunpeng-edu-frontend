@@ -10,7 +10,7 @@
       <input type="text" class="emailInput" placeholder="📫Email（用 insider 登录）" v-model="inputUsername" />
     </div>
     <div class="passwordInputContainer" ng-init="pswShow = false">
-      <input type="password" class="passwordInput" placeholder="🔒Password（用 123456 登录）" v-model="inputPassword" />
+      <input type="password" class="passwordInput" placeholder="🔒Password（用 000000 登录）" v-model="inputPassword" />
     </div>
     <div class="registerButtonContainer">
       <a class="registerButton" @click="register()">立即注册→</a>
