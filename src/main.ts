@@ -21,7 +21,7 @@ import './assets/less/nprogress.less' // 引入nprogress进度条样式
  * 权限，动态路由
  */
 import '@/core/permission' // 权限控制以及动态路由
-// import '@/config/guard.config' // 简单路由，废弃
+// import '@/config/guard.config' // 简易路由，废弃
 
 /**
  * 数据模拟

@@ -78,6 +78,7 @@ export class Teacher extends User {
     super(account, email, phone)
     this.teacherId = Mock.mock('@id')
     this.subject_id = Mock.mock('@id')
+    this.title = '院士'
   }
 }
 

@@ -48,6 +48,7 @@ request.interceptors.request.use((config) => {
   // 如果 token 存在
   // 让每个请求头携带自定义 token
   if (token) {
+    // @ts-ignore
     config.headers[ACCESS_TOKEN] = token
   }
   return config
