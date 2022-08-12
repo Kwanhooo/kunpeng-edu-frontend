@@ -18,22 +18,22 @@ const user = {
     __generalModules: [
       {
         title: '通知',
-        icon: '../src/assets/svgs/notification.svg',
+        icon: 'https://cloud.0xcafebabe.cn/img-host/notification.svg',
         path: '/notification',
       },
       {
         title: '日程',
-        icon: '../src/assets/svgs/schedule.svg',
+        icon: 'https://cloud.0xcafebabe.cn/img-host/schedule.svg',
         path: '/schedule',
       },
       {
         title: '设定',
-        icon: '../src/assets/svgs/settings.svg',
+        icon: 'https://cloud.0xcafebabe.cn/img-host/settings.svg',
         path: '/settings',
       },
       {
         title: '支持',
-        icon: '../src/assets/svgs/support.svg',
+        icon: 'https://cloud.0xcafebabe.cn/img-host/support.svg',
         path: '/support',
       },
     ],

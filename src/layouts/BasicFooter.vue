@@ -81,7 +81,7 @@
       </a>
     </div>
     <div class="certificate-sn">
-      <img class="basic-footer-beian-svg" src="https://cloud.0xcafebabe.cn/img-host/eian.svg" alt="beian" />
+      <img class="basic-footer-beian-svg" src="https://cloud.0xcafebabe.cn/img-host/beian.svg" alt="beian" />
       <span>粤ICP备2022013690号-2</span>
     </div>
   </div>
