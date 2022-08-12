@@ -8,6 +8,8 @@ const permission = {
     mainNav: [],
     subNav: [],
     rawRouterData: [],
+    isShowSubNav: true,
+    meta: {},
   },
   mutations: {
     SET_ROUTERS: (state, routers) => {
@@ -18,14 +20,6 @@ const permission = {
       state.rawRouterData = data
       const mainNav = data.filter((item) => item.parentId === 0)
       const tempNav = []
-      tempNav.push({
-        // @ts-ignore
-        id: 0,
-        // @ts-ignore
-        title: '首页',
-        // @ts-ignore
-        path: '/',
-      })
       mainNav.forEach((item) => {
         // @ts-ignore
         tempNav.push({
@@ -47,6 +41,7 @@ const permission = {
       const children = state.rawRouterData.filter((item) => item.parentId === parent.id)
       const tempNav = []
       children.forEach((item) => {
+        if (item.meta.isHiddenInSubNav) return
         tempNav.push({
           // @ts-ignore
           id: item.id,
@@ -57,6 +52,12 @@ const permission = {
         })
       })
       state.subNav = tempNav
+    },
+    SET_IS_SHOW_SUB_NAV: (state, isShow) => {
+      state.isShowSubNav = isShow
+    },
+    SET_ROUTE_META: (state, meta) => {
+      state.meta = meta
     },
   },
   actions: {

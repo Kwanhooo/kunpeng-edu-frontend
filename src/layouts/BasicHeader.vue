@@ -1,6 +1,6 @@
 <template>
   <div class="basic-layout-nav">
-    <img class="nav-icon" src="../assets/kunpeng_logo.png" alt="logo" />
+    <img class="nav-icon" src="https://cloud.0xcafebabe.cn/img-host/kunpeng_logo.png" alt="logo" />
     <svg
       data-testid="geist-icon"
       fill="none"
@@ -35,12 +35,12 @@
     </div>
     <div class="basic-link-nav">
       <div class="basic-link-nav-item" v-for="module in __generalModules" :key="module">
-        <div class="basic-link-nav-item-inner">
-          <img :src="module.icon" class="general-module-icon" />
-          <a class="link-nav" :href="module.path">
+        <a class="link-nav" :href="module.path">
+          <div class="basic-link-nav-item-inner">
+            <img :src="module.icon" class="general-module-icon" />
             {{ module.title }}
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>

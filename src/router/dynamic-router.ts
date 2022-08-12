@@ -10,6 +10,7 @@ const constantRouterComponents = {
   /**
    * 通用套件
    */
+  Index: () => import('@/views/general/index/Index.vue'),
   Card: () => import('@/components/Card/Card.vue'),
   /**
    * 异常页面
@@ -23,6 +24,7 @@ const constantRouterComponents = {
   // 班级管理
   ClassDashboard: () => import('@/views/class/dashboard/ClassDashboard.vue'),
   ClassBind: () => import('@/views/class/bind/ClassBind.vue'),
+  ClassAnalysis: () => import('@/views/class/analysis/ClassAnalysis.vue'),
 }
 
 const generalModule = [
@@ -56,9 +58,10 @@ const generalModule = [
 // 根
 const rootRouter = {
   key: '',
-  name: 'index',
+  name: 'root',
   path: '/',
   component: 'BasicLayout',
+  redirect: '/index',
   meta: { title: '首页' },
   children: [],
 }
@@ -114,8 +117,7 @@ export const generateAsyncDynamicRouter = (token) => {
  */
 export const generator = (routerMap, parent) => {
   return routerMap.map((item) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
+    // const { title, show, hideChildren, hiddenHeaderContent, target, icon } = item.meta || {}
     const currentRouter = {
       // 如果路由规则设置了path，则作为默认path，否则动态拼接生成一个path，如：/父path/子path
       path: item.path || `${(parent && parent.path) || ''}/${item.key}`,
@@ -124,14 +126,15 @@ export const generator = (routerMap, parent) => {
       component:
         constantRouterComponents[item.component || item.key] || ((() => import(`@/views/${item.component}`)) && null),
 
-      // meta: 页面标题，菜单图标，页面指令
-      meta: {
-        title: title,
-        icon: icon || undefined,
-        hiddenHeaderContent: hiddenHeaderContent,
-        target: target,
-        permission: item.name,
-      },
+      // 格式化 meta
+      // meta: {
+      //   title: title,
+      //   icon: icon || undefined,
+      //   hiddenHeaderContent: hiddenHeaderContent,
+      //   target: target,
+      //   permission: item.name,
+      // },
+      meta: item.meta,
     }
     // 防止拼接出两个反斜杠
     if (!currentRouter.path.startsWith('http')) {

@@ -1,5 +1,5 @@
 {
-  "*.vue": ["eslint --fix", "prettier --write", "git add"],
-  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write", "git add"],
-  "*.{css,less}": ["stylelint --fix --custom-syntax postcss-less", "git add"]
+  "*.vue": ["eslint --fix", "prettier --write"],
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.{css,less}": ["stylelint --fix --custom-syntax postcss-less"]
 }

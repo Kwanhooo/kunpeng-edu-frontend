@@ -1,11 +1,9 @@
 <template>
   <div class="basic-layout-content-title">
-    <div class="basic-layout-content-title-inner">
-      {{ pageTitle }}
-    </div>
+    <div class="basic-layout-content-title-inner" v-html="currentTitle"></div>
   </div>
   <div class="basic-layout-content-main">
-    <div class="basic-layout-sidebar-wrapper">
+    <div class="basic-layout-sidebar-wrapper" v-if="isShow()">
       <div class="basic-layout-sidebar-inner">
         <div
           :class="{ 'basic-layout-sidebar-item': true, 'active-side-bar-item': isActive(sub.path) }"
@@ -25,7 +23,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+import store from '@/store'
 
 export default {
   name: 'PageView',
@@ -36,6 +35,10 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['SetPageViewTitle']),
+    isShow() {
+      return store.getters.isShowSubNav
+    },
     onActiveSubChange(path) {
       this.$router.push(path)
     },
@@ -48,10 +51,10 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(['subNav']),
-  },
-  mounted() {
-    this.pageTitle = this.$route.meta.title
+    ...mapGetters(['subNav', 'pageViewTitle']),
+    currentTitle() {
+      return this.pageViewTitle
+    },
   },
 }
 </script>

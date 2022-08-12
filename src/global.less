@@ -1,5 +1,6 @@
 @globalSelectionBackground: #79ffe1;
 @globalSelectionColor: #000000;
+@globalBackgroundColor: #fafafa;
 @lightestColor: #ffffff;
 @lightColor: #fafafa;
 @deepColor: #eaeaea;
@@ -16,6 +17,10 @@
 html {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+#app {
+  background: @globalBackgroundColor;
 }
 
 .selection(@bg; @color) {

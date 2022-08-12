@@ -5,7 +5,7 @@ import { builder } from '../util'
 const info = (options) => {
   const userInfo = {
     id: Mock.mock('@guid'),
-    username: Mock.mock('@name'),
+    username: Mock.mock('@cname'),
     password: '',
     avatarUrl: 'https://cloud.0xcafebabe.cn/img-host/default-user-avatar.svg',
     status: 1,
@@ -34,11 +34,19 @@ const info = (options) => {
 const userNav = (options) => {
   const nav = [
     {
+      name: 'index',
+      path: '/index',
+      parentId: 0,
+      id: 9000,
+      meta: { title: '首页', keepAlive: false, isShowSubNav: false, icon: '', permission: ['index'] },
+      component: 'Index',
+    },
+    {
       name: 'class',
       path: '/class',
       parentId: 0,
       id: 1000,
-      meta: { title: '班级管理', keepAlive: false, icon: '', permission: ['index'] },
+      meta: { title: '班级管理', keepAlive: false, isShowSubNav: true, icon: '', permission: [''] },
       redirect: '/class/dashboard',
     },
     {
@@ -46,7 +54,7 @@ const userNav = (options) => {
       path: '/class/dashboard',
       parentId: 1000,
       id: 1001,
-      meta: { title: '班级总览', keepAlive: false, icon: '', permission: [''] },
+      meta: { title: '班级总览', keepAlive: false, isShowSubNav: true, icon: '', permission: [''] },
       component: 'ClassDashboard',
     },
     {
@@ -54,8 +62,23 @@ const userNav = (options) => {
       path: '/class/bind',
       parentId: 1000,
       id: 1002,
-      meta: { title: '班级绑定', keepAlive: false, icon: '', permission: [''] },
+      meta: { title: '班级绑定', keepAlive: false, isShowSubNav: true, icon: '', permission: [''] },
       component: 'ClassBind',
+    },
+    {
+      name: 'class-analysis',
+      path: '/class/analysis/:classId',
+      parentId: 1000,
+      id: 1003,
+      meta: {
+        title: '学情分析',
+        isHiddenInSubNav: true,
+        keepAlive: false,
+        isShowSubNav: false,
+        icon: '',
+        permission: [''],
+      },
+      component: 'ClassAnalysis',
     },
   ]
   return builder(nav, '获取用户路由成功')

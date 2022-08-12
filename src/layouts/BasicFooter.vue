@@ -2,7 +2,7 @@
   <div class="basic-layout-footer">
     <div class="basic-footer-col">
       <div class="footer-icon-wrapper">
-        <img class="l-icon" src="../assets/kunpeng_logo.png" alt="logo" />
+        <img class="l-icon" src="https://cloud.0xcafebabe.cn/img-host/kunpeng_logo.png" alt="logo" />
 
         <svg id="app-name" width="auto" height="32px">
           <text id="logo-text" x="2.3rem" y="80%" text-anchor="middle">unPeng</text>
@@ -65,11 +65,11 @@
     <div class="copyright-text">Copyright © 2022 KunPeng Edu Org. All rights reserved.</div>
     <div class="basic-footer-repo-wrapper">
       <a href="https://github.com/Kwanhooo/kunpeng-edu-frontend" target="_blank">
-        <img class="basic-footer-repo" src="../assets/svgs/github.svg" alt="github" />
+        <img class="basic-footer-repo" src="https://cloud.0xcafebabe.cn/img-host/github.svg" alt="github" />
       </a>
-      <img class="basic-footer-divide" src="../assets/svgs/divide.svg" alt="divide" />
+      <img class="basic-footer-divide" src="https://cloud.0xcafebabe.cn/img-host/divide.svg" alt="divide" />
       <a href="https://gitee.com/hixs/kunpeng_front" target="_blank">
-        <img class="basic-footer-repo" src="../assets/svgs/gitee-fill-round.svg" alt="gitee" />
+        <img class="basic-footer-repo" src="https://cloud.0xcafebabe.cn/img-host/gitee-fill-round.svg" alt="gitee" />
       </a>
     </div>
     <div class="basic-footer-service-status">
@@ -81,7 +81,7 @@
       </a>
     </div>
     <div class="certificate-sn">
-      <img class="basic-footer-beian-svg" src="../assets/svgs/beian.svg" alt="beian" />
+      <img class="basic-footer-beian-svg" src="https://cloud.0xcafebabe.cn/img-host/eian.svg" alt="beian" />
       <span>粤ICP备2022013690号-2</span>
     </div>
   </div>

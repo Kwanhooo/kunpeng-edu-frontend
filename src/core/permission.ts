@@ -20,6 +20,9 @@ router.beforeEach((to, from, next) => {
   // console.log(from, to)
   NProgress.start()
   to.meta && typeof to.meta.title !== 'undefined' && setDocumentTitle(to.meta.title + documentTitleBase)
+  // 设定是否显示侧面导航栏
+  store.commit('SET_IS_SHOW_SUB_NAV', to.meta.isShowSubNav)
+  store.commit('SET_ROUTE_META', to.meta)
   // 检查token
   const token = storage.get(ACCESS_TOKEN)
   if (token) {
@@ -44,7 +47,6 @@ router.beforeEach((to, from, next) => {
               // 动态添加可访问路由表
               resetRouter() // 重置路由
               store.getters.addRouters.forEach((r) => {
-                // console.log(r)
                 router.addRoute(r)
               })
               // 加载子导航

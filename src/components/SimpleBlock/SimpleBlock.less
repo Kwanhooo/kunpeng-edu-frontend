@@ -1,0 +1,38 @@
+@fontSans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+@baseFontSize: 14px;
+@baseFontSizeLarger: 17px;
+@titleSize: 21px;
+@basePadding: 1.5rem;
+@baseBorderRadius: 5px;
+
+@lightestColor: #ffffff;
+@lightColor: #fafafa;
+@deepColor: #eaeaea;
+@deeperColor: #666666;
+@deepestColor: #000000;
+
+.simple-block-wrapper {
+  display: inline-block;
+  width: 27.5rem;
+  height: auto;
+  padding: 1.5rem 2rem;
+  margin: 2rem .5rem 0;
+  background: @lightestColor;
+  border-radius: @baseBorderRadius;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  transition: box-shadow .1s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgb(0 0 0 / 10%);
+  }
+
+  &:nth-child(1) {
+    margin: 0 .5rem;
+  }
+
+  &:nth-child(2) {
+    margin: 0 .5rem;
+  }
+}

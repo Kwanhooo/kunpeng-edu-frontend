@@ -95,7 +95,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['JoinClassByVerifyCode', 'RegisterClass']),
+    ...mapActions(['JoinClassByVerifyCode', 'RegisterClass', 'SetPageViewTitle']),
     bindCodeInputFocusIn() {
       document.querySelector('.bind-code-wrapper').classList.add('bind-code-focus')
     },
@@ -145,6 +145,9 @@ export default {
           this.$message.error(err)
         })
     },
+  },
+  mounted() {
+    this.SetPageViewTitle(this.$route.meta.title)
   },
 }
 </script>
