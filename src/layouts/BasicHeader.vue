@@ -25,7 +25,7 @@
       <svg
         class="account-option-svg"
         fill="none"
-        height="16"
+        height="22"
         stroke="currentColor"
         stroke-width="1.5"
         viewBox="0 0 16 24"
