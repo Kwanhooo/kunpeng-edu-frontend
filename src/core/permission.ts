@@ -74,6 +74,8 @@ router.beforeEach((to, from, next) => {
           })
       } else {
         // 如果有用户角色
+        // 设置子导航路由
+        store.commit('SET_SUB_NAV', to.path)
         // 则已经生成过动态路由，直接按请求路径放行
         next()
       }

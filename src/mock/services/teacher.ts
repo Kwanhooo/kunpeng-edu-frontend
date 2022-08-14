@@ -14,13 +14,14 @@ const classRegister = (options) => {
   return builder(registerResult, '注册班级成功，您现在是 ' + body.classNumber + ' 的班主任！', 200)
 }
 
+// 单例班级列表
+const singletonClassList: Array<Class> = []
+
 const classList = () => {
-  const resList = []
-  for (let i = 0; i < 5; i++) {
-    // @ts-ignore
-    resList.push(new Class())
+  while (singletonClassList.length < 5) {
+    singletonClassList.push(new Class())
   }
-  return builder(resList, '获取班级列表成功！', 200)
+  return builder(singletonClassList, '获取班级列表成功！', 200)
 }
 
 Mock.mock(/\/class\/bind/, 'post', classBind)
