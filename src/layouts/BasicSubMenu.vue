@@ -7,16 +7,16 @@
       id="dynamic-icon"
       style="margin-top: 0.5rem; margin-right: 0.5rem"
     />
-    <a
+    <router-link
       :class="{ '--tab': true, '--is-active': isActive(nav.path) }"
       v-for="(nav, index) in mainNav"
       :key="index"
       @click="onActiveModuleChange(nav, index)"
       :id="nav.path"
-      :href="nav.path"
+      :to="nav.path"
     >
       {{ nav.title }}
-    </a>
+    </router-link>
   </div>
 </template>
 

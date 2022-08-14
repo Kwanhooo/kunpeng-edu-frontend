@@ -1,9 +1,17 @@
 <template>Schedule</template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Schedule',
+  methods: {
+    ...mapActions(['SetPageViewTitle']),
+  },
+  mounted() {
+    this.SetPageViewTitle(this.$route.meta.title)
+  },
 }
 </script>
 

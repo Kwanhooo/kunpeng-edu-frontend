@@ -34,13 +34,21 @@
       </svg>
     </div>
     <div class="basic-link-nav">
-      <div class="basic-link-nav-item" v-for="module in __generalModules" :key="module">
-        <a class="link-nav" :href="module.path">
+      <div
+        :class="{ 'basic-link-nav-item': true, 'basic-link-nav-item-active': module.path === this.$route.path }"
+        v-for="module in __generalModules"
+        :key="module"
+        :id="module.path"
+      >
+        <router-link
+          :class="{ 'link-nav': true, 'basic-link-nav-item-active': module.path === this.$route.path }"
+          :to="module.path"
+        >
           <div class="basic-link-nav-item-inner">
             <img :src="module.icon" class="general-module-icon" />
             {{ module.title }}
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>

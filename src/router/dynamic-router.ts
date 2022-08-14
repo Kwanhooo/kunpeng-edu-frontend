@@ -21,6 +21,11 @@ const constantRouterComponents = {
    * 懒加载，当路由被访问的时候才加载对应组件
    * @constructor
    */
+  // 基本功能
+  Notification: () => import('@/views/general/notification/Notification.vue'),
+  Schedule: () => import('@/views/general/schedule/Schedule.vue'),
+  Settings: () => import('@/views/general/settings/Settings.vue'),
+  Support: () => import('@/views/general/support/Support.vue'),
   // 班级管理
   ClassDashboard: () => import('@/views/class/dashboard/ClassDashboard.vue'),
   ClassBind: () => import('@/views/class/bind/ClassBind.vue'),
@@ -32,26 +37,26 @@ const generalModule = [
   {
     name: 'notification',
     path: '/notification',
-    meta: { title: '通知中心', keepAlive: false },
-    component: () => import('@/views/general/notification/Notification.vue'),
+    meta: { title: '通知中心', keepAlive: false, isShowSubNav: false },
+    component: 'Notification',
   },
   {
     name: 'schedule',
     path: '/schedule',
-    meta: { title: '日程', keepAlive: false },
-    component: () => import('@/views/general/schedule/Schedule.vue'),
+    meta: { title: '日程', keepAlive: false, isShowSubNav: false },
+    component: 'Schedule',
   },
   {
     name: 'settings',
     path: '/settings',
-    meta: { title: '设定', keepAlive: false },
-    component: () => import('@/views/general/settings/Settings.vue'),
+    meta: { title: '设定', keepAlive: false, isShowSubNav: false },
+    component: 'Settings',
   },
   {
     name: 'support',
     path: '/support',
-    meta: { title: '支持', keepAlive: false },
-    component: () => import('@/views/general/support/Support.vue'),
+    meta: { title: '支持', keepAlive: false, isShowSubNav: false },
+    component: 'Support',
   },
 ]
 

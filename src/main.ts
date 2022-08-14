@@ -9,19 +9,19 @@ import $store from './store/index'
 import { VueAxios } from './utils/request'
 
 /**
- * 样式引入
- */
-import './global.less' // 自定义全局样式
-import NProgress from 'nprogress' // 引入nprogress进度条
-import './assets/less/nprogress.less' // 引入nprogress进度条样式
-
-/**
  * 组建库引入
  */
 import ElementPlus from 'element-plus' // 引入element-plus
 import 'element-plus/dist/index.css' // 引入element-plus样式
 import Antd from 'ant-design-vue' // 引入ant-design-vue
 import 'ant-design-vue/dist/antd.css' // 引入antd样式
+
+/**
+ * 样式引入
+ */
+import './global.less' // 自定义全局样式
+import NProgress from 'nprogress' // 引入nprogress进度条
+import './assets/less/nprogress.less' // 引入nprogress进度条样式
 
 /**
  * 权限，动态路由
