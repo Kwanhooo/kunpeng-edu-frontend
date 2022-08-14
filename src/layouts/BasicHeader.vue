@@ -20,7 +20,8 @@
       <img class="s-avatar" :src="getAvatar()" alt="user-avatar" />
       <div class="s-username">{{ username }}</div>
       <div class="identity-tag-wrapper">
-        <div class="identity-tag">{{ roles }}</div>
+        <span class="identity-tag">{{ roles }}</span>
+        <!--        {{ roles }}-->
       </div>
       <svg
         class="account-option-svg"

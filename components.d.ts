@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     ACard: typeof import('ant-design-vue/es')['Card']
     ACol: typeof import('ant-design-vue/es')['Col']
     ARow: typeof import('ant-design-vue/es')['Row']
+    ASkeleton: typeof import('ant-design-vue/es')['Skeleton']
     AStatistic: typeof import('ant-design-vue/es')['Statistic']
     Card: typeof import('./src/components/Card/Card.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

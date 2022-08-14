@@ -1,5 +1,5 @@
 <template>
-  <div class="basic-layout-content-title">
+  <div class="basic-layout-content-title" v-if="currentTitle !== undefined && currentTitle !== ''">
     <div class="basic-layout-content-title-inner" v-html="currentTitle"></div>
   </div>
   <div class="basic-layout-content-main">
@@ -43,7 +43,7 @@ export default {
       this.$router.push(path)
     },
     isActive(path) {
-      // 如果path带有参数，则将他去除
+      // 如果path带有参数，则将它去除
       if (path.indexOf('?') > -1) {
         path = path.split('?')[0]
       }
@@ -59,4 +59,6 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="less">
+@import './RichTextParse';
+</style>

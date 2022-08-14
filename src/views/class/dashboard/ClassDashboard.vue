@@ -10,6 +10,16 @@
     <button id="class-dashboard-search-btn">🔍 搜索</button>
   </div>
   <div class="class-dashboard-wrapper">
+    <a-skeleton
+      avatar
+      :paragraph="{ rows: 5 }"
+      style="margin: 2rem 0.5rem 0; width: 27.5rem; display: inline-block"
+      active
+      v-for="i in [1, 2, 3, 4, 5, 6]"
+      :key="i"
+      :loading="isShowSkeleton"
+    />
+
     <SimpleBlock v-for="myClass in displayList" :key="myClass" @click="handleShowDetail(myClass)">
       <template v-slot:default>
         <div class="overview-top">
@@ -62,7 +72,7 @@
         </div>
         <div class="class-ov-time">
           <div>21 m 前 源自</div>
-          <div>
+          <div style="margin-bottom: 1px">
             &nbsp;<img class="class-ov-info-source-img" src="https://cloud.0xcafebabe.cn/img-host/kunpeng_logo.png" />
             <span style="font-size: 12px">unpeng Analysis</span>
           </div>
@@ -84,6 +94,7 @@ export default {
     return {
       keywords: '',
       displayList: [],
+      isShowSkeleton: true,
     }
   },
   methods: {
@@ -107,11 +118,13 @@ export default {
     },
   },
   mounted() {
+    this.isShowSkeleton = true
     this.SetPageViewTitle(this.$route.meta.title)
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const vm = this
     this.GetMyClassList().then((res) => {
       vm.displayList = res
+      vm.isShowSkeleton = false
     })
   },
 }

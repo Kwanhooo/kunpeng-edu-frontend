@@ -1,5 +1,7 @@
 <template>
-  <div style="background: palegoldenrod; width: 100%; height: 150vh"></div>
+  <div style="width: 100%">
+    <a-skeleton active :paragraph="{ rows: 50 }" :loading="true" />
+  </div>
 </template>
 
 <script>
@@ -12,7 +14,7 @@ export default {
     ...mapActions(['SetPageViewTitle']),
   },
   mounted() {
-    this.SetPageViewTitle(this.$route.meta.title)
+    this.SetPageViewTitle('')
   },
 }
 </script>
